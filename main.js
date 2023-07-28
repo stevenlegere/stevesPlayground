@@ -324,4 +324,39 @@ function weather(sunny, raining) {
             const musicTypes = document.selectForm.musicTypes;
             console.log(`You have selected ${countSelected(musicTypes)} music types`);
         });
+
+        function plusFive() {
+        let i = 0;
+        while (i += 5) {
+            if (i === 20) {
+                break;
+            }
+            console.log(i);
+        }
+    };
+    plusFive();
+
+    function plusToFive() {
+        let i = 0;
+        do {
+            i += 1;
+            console.log(i);
+        } while (i < 5);
+    };
+    plusToFive();
+
+    function iteratesThrough() {
+        const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let theValue = 5;
+
+        for (let i = 0; i < a.length; i++) {
+            console.log(`Iteration ${i}: comparing ${a[i]} with ${theValue}`);
+            if (a[i] === theValue) {
+                break;
+            }
+        }
+    }
+    iteratesThrough();
+
+
         
