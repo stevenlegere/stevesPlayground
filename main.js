@@ -346,7 +346,7 @@ function weather(sunny, raining) {
     plusToFive();
 
     function iteratesThrough() {
-        const a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 11, 12];
         let theValue = 5;
 
         for (let i = 0; i < a.length; i++) {
@@ -357,6 +357,25 @@ function weather(sunny, raining) {
         }
     }
     iteratesThrough();
+
+    function iterateIAndJ() {
+        let i = 0;
+        let j = 10;
+
+        while (i < 4) {
+            // console.log(i);
+            i += 1;
+            checkj: while (j > 1) {
+                // console.log(j);
+                j -= 1;
+                if (j % 2 === 0) {
+                    continue checkj;
+                }
+                console.log(j, "is odd.");
+                }
+            }
+        };
+        iterateIAndJ();
 
 
         
