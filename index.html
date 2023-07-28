@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button type="button">Click Me!</button>
     <p type="p">P</p>
     <button id="myBtn">Try it</button>
-        <script src="main.js"></script>
+    <form name="selectForm">
+        <label for="musicTypes">
+            Choose some music types, then click the button below:</label>
+        <select id="musicTypes" name="musicTypes" multiple="multiple">
+            <option value="R&B">R&B</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Blues">Blues</option>
+            <option value="New Age">New Age</option>
+            <option value="Classical">Classical</option>
+            <option value="Opera">Opera</option>
+        </select>
+        </label>
+        <button id="btn" type="button">How many are selected?
+        </button>
+    </form>
+    <script src="main.js"></script>
 </body>
+
 </html>
