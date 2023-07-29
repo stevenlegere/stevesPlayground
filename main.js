@@ -378,4 +378,13 @@ function weather(sunny, raining) {
         iterateIAndJ();
 
 
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Skoda"];
+        let text = "";
+        for (let i = 0; i < cars.length; i++) {
+            text += cars[i] + "<br>";
+        };
+        console.log(cars);
+        document.getElementById("carsDemo").innerHTML = text;
+
+
         
