@@ -51,19 +51,28 @@ const carName3 = `Saab`
 // Good programming practice to declare all variables at the beginning of a script //
 
 // Declaring muliple variables in a single statement //
-let charector = "Super Woman",
-SuperPower = "fly",
-Wheretoo = "around the world",
-HowOld = 26;
+function superHuman() {
+let superWomanIs = {
+charector: "Super Woman",
+SuperPower: "fly",
+WhereToo: "around the world",
+HowOld: 26
+};
+return superWomanIs;
+};
+const superWomanIsSuper = superHuman();
+console.log(superWomanIsSuper.charector, superWomanIsSuper.SuperPower);
 
 // Adding strings //
 let superWoman = "Super" + " " + "Woman";
+console.log(superWoman, );
 
 let b = "6" + 2 + 2; //622//
 // If you put a number in quotes the rest will be treated as string //
 let d = 2 + 3 + "4"; //54//
 
-let myAge = 41 + 1;
+let myAge = 41 + 1 + " years old";
+console.log(myAge);
 // Here I added one year to my age //
 
 // Conditional statements //
@@ -111,9 +120,10 @@ if(hour > 17) {
 // if statement from const variable above //
 // else condition for good evening expression (because hour is more than 17) //
 
-function greet() {
+function greetThis() {
     return "Hello Steve";
 }
+console.log(greetThis());
 // function is code designed to perform specific task //
 // Above I have asked to return Hello Steve when I say greet //
 // Think of it as calling for an answer //
@@ -122,15 +132,18 @@ function greet() {
 function greet(firstName) {
     return "Hello" + firstName;
 }
+console.log(greet(" Steve"));
 
 
-function myFunction() {
-    return("Hello World!");
+function myFunction(str) {
+    return("Hello " + str + " World!");
   }
+  console.log(myFunction("🌻"));
 
   function square(number) {
     return number * number;
   }
+  console.log(square(20));
 // A function definition (also function declaration or function statement) consists of the function keyword followed by the name of the function. A list of parameters to the function, enclosed in the parentheses and separated by commas. //
 
 const myCat ={
@@ -138,6 +151,8 @@ const myCat ={
     name: "Tony",
     LovesCuddles: true,
 };
+console.log(myCat.color);
+
 // Objects go between {} //
 let simpsons = {
     0: "Homer",
@@ -213,7 +228,9 @@ let person = {
     likesPizza: true,
     age: 72,
 };
-console.log("name, likesPizza, age");
+console.log(person.name);
+console.log(person['name']);
+console.log(person.age);
 
 // React
 const oldCount = [1, 2, 3, 4, 5];
@@ -380,11 +397,31 @@ function weather(sunny, raining) {
 
         const cars = ["BMW", "Volvo", "Saab", "Ford", "Skoda"];
         let text = "";
+        // Expression 1 is executed (one time) before the execution of the code block.
+        // Expression 2 defines the condition for executing the code block.
+        // Expression 3 is executed (every time) after the code block has been executed.
         for (let i = 0; i < cars.length; i++) {
             text += cars[i] + "<br>";
         };
         console.log(cars);
         document.getElementById("carsDemo").innerHTML = text;
 
-
         
+        function reverse(array) {
+            if (!Array.isArray(array)) {
+              return array;
+            }
+          
+            const reversedArray = [];
+            for (let i = array.length - 1; i >= 0; i--) {
+              const element = array[i];
+              reversedArray.push(Array.isArray(element) ? reverse(element.reverse()) : element);
+            }
+          
+            return reversedArray;
+          }
+          
+          const data = [1, 2, 3, 4, 5];
+          const result = reverse(data);
+          console.log(result);
+          
