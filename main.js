@@ -168,6 +168,8 @@ console.log(simpsons[2])
 let simpsonsFamily = ["Homer", "Marge", "Bart", "Lisa", "Maggie"]
 console.log(simpsonsFamily[3]);
 // This is an array // arrays are lists of items starting from 0 //
+const isArray = Array.isArray(simpsonsFamily);
+console.log(isArray);
 
 console.log(simpsonsFamily[5] = "Santa's little helper");
 // This has added [5] outside of the original variable array //
@@ -374,6 +376,7 @@ function weather(sunny, raining) {
         }
     }
     iteratesThrough();
+    
 
     function iterateIAndJ() {
         let i = 0;
@@ -424,4 +427,16 @@ function weather(sunny, raining) {
           const data = [1, 2, 3, 4, 5];
           const result = reverse(data);
           console.log(result);
+
+          let luigisDebt = 140;
+            luigisDebt = luigisDebt - 35;
+            console.log("Lugis Debt is " + luigisDebt);
+            // 105
+
+            console.log(Math.max(2, 4) + " Math.max");
+
+            let theNumber = Number(prompt("pick a number"));
+            console.log("Your number is the square root of " + 
+            theNumber * theNumber);
+            // 2 * 2 = 4
           
