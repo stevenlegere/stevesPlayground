@@ -439,4 +439,117 @@ function weather(sunny, raining) {
             console.log("Your number is the square root of " + 
             theNumber * theNumber);
             // 2 * 2 = 4
+
+           // write a function charMap that, given a string, returns an object representing the occurrences map of the english alphabet letters contained in the string, in lowercase (e.g "M" gets counted as "m"
+           function charMap(input) {
+              // Initialise an empty object to store the occurrences of each letter
+            const occurrences = {};
+            // convert the input string to lowercase
+            const inputLower = input.toLowerCase();
+            // Regular expression to match English alphabet letters
+            const alphabetRegex = /[a-z]/;
+
+            // Loop through the input string
+            for (let i = 0; i < inputLower.length; i++) {
+                const char = inputLower[i];
+                // Check if the current character is a letter
+                if (alphabetRegex.test(char)) {
+                    occurrences[char] = (occurrences[char] || 0) + 1;
+                }
+            }
+
+            return occurrences;
+           } 
+
+           const inputString = "Hello World!";
+           const charMapResult = charMap(inputString);
+           console.log(charMapResult);
+
+
+           function loopingATriangle() {
+            let hash = "#";
+            for (let i = 0; i < 7; i++) {
+                console.log(hash);
+                hash += "#";
+            }
+        };
+        loopingATriangle();
+
+        // FizzBuzz
+        // What is FizzBuzz?
+        // Write a program that prints the numbers from 1 to 10
+        // For multiples of three print "Fizz" instead of the number
+        // For the multiples of five print "Buzz" instead of the number
+        // For numbers which are multiples of both three and five print "FizzBuzz"
+        function fizzBuzz() {
+            for (let i = 1; i <= 15; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log("FizzBuzz");
+                } else if (i % 3 === 0) {
+                    console.log("Fizz");
+                } else if (i % 5 === 0) {
+                    console.log("Buzz");
+                } else {
+                    console.log(i);
+                }
+            }
+        };
+        fizzBuzz();
+
+
           
+        // async function maxPulseRecord(minWeight, maxWeight) {
+        //     try {
+        //         // Initialise the page number to start fetching the records
+        //         let currentPage = 1;
+        //         // Initialise a variable to hold the record with the max pulse
+        //         let maxPulseRecord = `null`;
+                
+        //         // Loop until the max pulse record is found or there are no more records to fetch
+        //         while (true) {
+        //             // Fetch records from the API endpoint for the current page
+        //             const response = await fetch(`https://jsonmock.hackerrank.com/api/medical_records?page={page_no}`);
+                    
+        //             // Check if the response is successful
+        //             if (response.status === 200) {
+        //                 // The response is successful, continue
+        //             }
+        //             //Extract records from the API response
+        //             const { data: records } = await response.json();
+                    
+        //             // Loop through the records
+        //             if (records.length === 0) {
+        //                 // Break the loop if no records to fetch
+        //                 break;
+        //             }
+        //             // Loop through the records retrieved from the API
+        //             for (const record of records) {
+        //                 // Convert weight to an integer
+        //                 const weight = parseInt(record.weight);
+        //                 // Check if the weight falls within the specified range
+        //                 if (weight >= minWeight && weight <= maxWeight) {
+        //                     // Convert pulse to integer
+        //                     const pulse = parseInt(record.pulse);
+        //                     // Check if the current record has max pulse
+        //                     if (!maxPulseRecord || pulse > maxPulseRecord.pulse || (pulse === maxPulseRecord.pulse && record.id < maxPulseRecord.id)) {
+        //                         // If the current record has higher pulse or is a tie but has lower ID, update maxPulseRecord
+        //                         maxPulseRecord = { id: record.id, diagnosis: record.diagnosis } ;
+        //                     }
+                            
+        //                 }
+        //             }
+        //             // Increment the page number to fetch records from the next page
+        //             currentPage++;
+        //         }
+        //         // If maxPulseRecord is not null, return an array with the record ID and diagnosis
+        //         // Otherwise return an empty array string
+        //         return maxPulseRecord ? [maxPulseRecord.id, maxPulseRecord.diagnosis] : null;
+        //     } catch (error) {
+        //         // If an error occurs during fetching or processing data, log the error and return null
+        //         console.error('Error occurred while fetching data:', error.message);
+        //         return 'null';
+        //     }
+        // }
+                  
+
+        
