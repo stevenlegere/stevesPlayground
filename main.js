@@ -1,3 +1,4 @@
+
 console.log("This is my JS testing file");
 
 // Statements are composed of values, operators, expressions, keywords, comments //
@@ -497,59 +498,72 @@ function weather(sunny, raining) {
         fizzBuzz();
 
 
-          
-        // async function maxPulseRecord(minWeight, maxWeight) {
-        //     try {
-        //         // Initialise the page number to start fetching the records
-        //         let currentPage = 1;
-        //         // Initialise a variable to hold the record with the max pulse
-        //         let maxPulseRecord = `null`;
+    /* Chessboard - Write a program that creates a string that represents an 8x8 grid,
+    using newline characters to separate lines. At each position of the grid there is either a space or a "#" character.
+    The characters should form a chessboard. */
+
+    function chessboard() {
+        let size = 8;
+        let board = "";
+
+        for (let y = 0; y < size; y++) {
+            for (let x = 0; x < size; x++) {
+                if ((x + y) % 2 === 0) {
+                    board += " ";
+                } else {
+                    board += "#";
+                }
                 
-        //         // Loop until the max pulse record is found or there are no more records to fetch
-        //         while (true) {
-        //             // Fetch records from the API endpoint for the current page
-        //             const response = await fetch(`https://jsonmock.hackerrank.com/api/medical_records?page={page_no}`);
-                    
-        //             // Check if the response is successful
-        //             if (response.status === 200) {
-        //                 // The response is successful, continue
-        //             }
-        //             //Extract records from the API response
-        //             const { data: records } = await response.json();
-                    
-        //             // Loop through the records
-        //             if (records.length === 0) {
-        //                 // Break the loop if no records to fetch
-        //                 break;
-        //             }
-        //             // Loop through the records retrieved from the API
-        //             for (const record of records) {
-        //                 // Convert weight to an integer
-        //                 const weight = parseInt(record.weight);
-        //                 // Check if the weight falls within the specified range
-        //                 if (weight >= minWeight && weight <= maxWeight) {
-        //                     // Convert pulse to integer
-        //                     const pulse = parseInt(record.pulse);
-        //                     // Check if the current record has max pulse
-        //                     if (!maxPulseRecord || pulse > maxPulseRecord.pulse || (pulse === maxPulseRecord.pulse && record.id < maxPulseRecord.id)) {
-        //                         // If the current record has higher pulse or is a tie but has lower ID, update maxPulseRecord
-        //                         maxPulseRecord = { id: record.id, diagnosis: record.diagnosis } ;
-        //                     }
-                            
-        //                 }
-        //             }
-        //             // Increment the page number to fetch records from the next page
-        //             currentPage++;
-        //         }
-        //         // If maxPulseRecord is not null, return an array with the record ID and diagnosis
-        //         // Otherwise return an empty array string
-        //         return maxPulseRecord ? [maxPulseRecord.id, maxPulseRecord.diagnosis] : null;
-        //     } catch (error) {
-        //         // If an error occurs during fetching or processing data, log the error and return null
-        //         console.error('Error occurred while fetching data:', error.message);
-        //         return 'null';
+                }
+                board += "\n";
+            }
+            console.log(board);
+        };
+        chessboard();
+
+
+        // async function maxPulseRecord(minWeight, maxWeight) {
+        //   const url = "https://jsonmock.hackerrank.com/api/medical_records";
+        //   let page = 1;
+        //   let allRecords = [];
+        
+        //   // Fetch data in batches until we reach the last page
+        //   while (true) {
+        //     const response = await axios.get(url, { params: { page } });
+        //     const data = response.data;
+        //     allRecords = allRecords.concat(data.data);
+        
+        //     if (data.page === data.total_pages) {
+        //       break;
         //     }
+        //     page++;
+        //   }
+        
+        //   // Filter records within the weight range
+        //   const filteredRecords = allRecords.filter(record => minWeight <= record.meta.weight && record.meta.weight <= maxWeight);
+        
+        //   if (filteredRecords.length === 0) {
+        //     return 'null'; // If no records within the weight range, return 'null'
+        //   }
+        
+        //   // Find the record with the maximum pulse and the lowest ID (in case of a tie)
+        //   const maxPulseRecord = filteredRecords.reduce((acc, curr) => {
+        //     if (curr.vitals.pulse > acc.vitals.pulse || (curr.vitals.pulse === acc.vitals.pulse && curr.id < acc.id)) {
+        //       return curr;
+        //     }
+        //     return acc;
+        //   });
+        
+        //   return [maxPulseRecord.id, maxPulseRecord.diagnosis.name];
         // }
-                  
+        
+        // // Example usage:
+        // const minWeight = 170;
+        // const maxWeight = 190;
+        // maxPulseRecord(minWeight, maxWeight)
+        //   .then(result => console.log(result)) // Output: [8, 'Common Cold']
+        //   .catch(err => console.error(err));
+        
+                          
 
         
