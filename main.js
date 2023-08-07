@@ -396,7 +396,7 @@ function weather(sunny, raining) {
                 }
             }
         };
-        iterateIAndJ();
+            iterateIAndJ();
 
 
         const cars = ["BMW", "Volvo", "Saab", "Ford", "Skoda"];
@@ -521,48 +521,25 @@ function weather(sunny, raining) {
         };
         chessboard();
 
-
-        // async function maxPulseRecord(minWeight, maxWeight) {
-        //   const url = "https://jsonmock.hackerrank.com/api/medical_records";
-        //   let page = 1;
-        //   let allRecords = [];
-        
-        //   // Fetch data in batches until we reach the last page
-        //   while (true) {
-        //     const response = await axios.get(url, { params: { page } });
-        //     const data = response.data;
-        //     allRecords = allRecords.concat(data.data);
-        
-        //     if (data.page === data.total_pages) {
-        //       break;
-        //     }
-        //     page++;
-        //   }
-        
-        //   // Filter records within the weight range
-        //   const filteredRecords = allRecords.filter(record => minWeight <= record.meta.weight && record.meta.weight <= maxWeight);
-        
-        //   if (filteredRecords.length === 0) {
-        //     return 'null'; // If no records within the weight range, return 'null'
-        //   }
-        
-        //   // Find the record with the maximum pulse and the lowest ID (in case of a tie)
-        //   const maxPulseRecord = filteredRecords.reduce((acc, curr) => {
-        //     if (curr.vitals.pulse > acc.vitals.pulse || (curr.vitals.pulse === acc.vitals.pulse && curr.id < acc.id)) {
-        //       return curr;
-        //     }
-        //     return acc;
-        //   });
-        
-        //   return [maxPulseRecord.id, maxPulseRecord.diagnosis.name];
-        // }
-        
-        // // Example usage:
-        // const minWeight = 170;
-        // const maxWeight = 190;
-        // maxPulseRecord(minWeight, maxWeight)
-        //   .then(result => console.log(result)) // Output: [8, 'Common Cold']
-        //   .catch(err => console.error(err));
+// Nested Scope
+// Each local scope can also see all the local scopes that contain it, and all scopes can see the global scope. This approach to binding visibility is called lexical scoping.
+// Recipe function
+const hummus = function(factor) {
+    const ingredient = function(amount, unit, name) {
+        let ingredientAmount = amount * factor;
+        if (ingredientAmount > 1) {
+            unit += "s";
+        }
+        console.log(`${ingredientAmount} ${unit} ${name}`);
+    };
+    ingredient(1, "can", "chickpeas");
+    ingredient(0.25, "cup", "tahnini");
+    ingredient(0.25, "cup", "lemon juice");
+    ingredient(1, "clove", "garlic");
+    ingredient(2, "tablespoon", "olive oil");
+    ingredient(0.5, "teaspoon", "cumin");
+}
+hummus(3);
         
                           
 
