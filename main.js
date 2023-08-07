@@ -540,7 +540,28 @@ const hummus = function(factor) {
     ingredient(0.5, "teaspoon", "cumin");
 }
 hummus(3);
-        
-                          
 
-        
+
+// Declaration Notation - function written as a statement
+function square(x) {
+    return x * x;
+}                
+console.log(square(12));
+
+
+// function called below the code still works
+console.log("The future says:", future());
+
+function future() {
+    return "You'll never have flying cars";
+}
+
+// Arrow Functions
+const power = (base, exponent) => {
+    let result = 1;
+    for (let count = 0; count < exponent; count++) {
+        result *= base;
+    }
+    return result;
+}
+console.log(power(2, 10));
