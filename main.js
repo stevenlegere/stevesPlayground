@@ -565,3 +565,44 @@ const power = (base, exponent) => {
     return result;
 }
 console.log(power(2, 10));
+
+
+// When there is only one parameter, you can omit the parentheses around the parameter list
+const square1 = (x) => { return x * x; };
+const square2 = x => x * x;
+console.log(square1(5));
+console.log(square2(5));
+
+// When an arrow function has no parameters at all, its parameter list is just an empty set of parentheses
+const horn = () => {
+    console.log("Toot");
+};
+horn();
+
+function power2(base, exponent = 2) {
+    let result = 1;
+    for (let count = 0; count < exponent; count++) {
+        result *= base;
+    }
+    return result;
+}
+console.log(power2(4)); // 16
+console.log(power2(2, 6)); // 64
+
+
+// Closure
+// Being able to reference a specific instance of local bindings in an enclosing scope is called closure. A function that references bindings from local scopes around it is called a closure.
+function wrapValue(n) {
+    let local = n;
+    return () => local;
+}
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1()); // 1
+console.log(wrap2()); // 2
+
+function multiplier(factor) {
+    return number => number * factor;
+}
+let twice = multiplier(2);
+console.log(twice(5)); // 10
