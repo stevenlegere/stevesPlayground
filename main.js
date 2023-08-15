@@ -640,3 +640,22 @@ function findSolution(target) {
         console.log(`${chickenString} Chickens`);
     }
         printFarmInventory(7, 11);
+
+        // Define j to hold a function value
+        const j = function(a) {
+            console.log(a + 2);
+            if (a > 0) { 
+            j(a - 1);
+            }
+        };
+        j(5);
+
+        // Declare l to hold a function
+        function l(a, b) {
+            return a + b * 3.5;
+        }
+        console.log(l(2, 3));
+        // In the expression 2 + 3 * 3.5, the multiplication operation takes precedence over addition. So, you perform the multiplication first, then add the result to 2.
+        // Here's the step-by-step calculation:
+        // Multiply 3 by 3.5: 3 * 3.5 = 10.5
+        // Add the result to 2: 2 + 10.5 = 12.5
