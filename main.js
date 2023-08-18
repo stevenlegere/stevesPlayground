@@ -659,3 +659,20 @@ function findSolution(target) {
         // Here's the step-by-step calculation:
         // Multiply 3 by 3.5: 3 * 3.5 = 10.5
         // Add the result to 2: 2 + 10.5 = 12.5
+
+        // Write a function min that takes in two argument and returns their minimum
+        function min(a, b) {
+            if (a < b) {
+                return a;
+            }
+            else {
+                return b;
+            }
+        }
+        console.log(min(2, 10));
+
+        // Using math.min write a function min that takes in two arguments and returns their minimum
+        function min(a, b) {
+            return Math.min(a, b);
+        }
+        console.log(min(5, 10));
