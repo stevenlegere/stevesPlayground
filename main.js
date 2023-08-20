@@ -676,3 +676,43 @@ function findSolution(target) {
             return Math.min(a, b);
         }
         console.log(min(5, 10));
+
+        
+        let doh = "Doh";
+        console.log(typeof doh.toUpperCase);
+        // → function
+        console.log(doh.toUpperCase());
+        // → DOH
+
+        // Pop and Push
+        let sequence = [1, 2, 3];
+        sequence.push(4);
+        sequence.push(5);
+        console.log(sequence);
+        // → [1, 2, 3, 4, 5]
+        console.log(sequence.pop());
+        // → 5
+        console.log(sequence);
+        // → [1, 2, 3, 4]
+
+        // Objects
+        let day1 = {
+            squirrel: false,
+            events : [ "work", "touched tree", "pizza", "running"]
+        };
+        console.log(day1.squirrel);
+        // → false
+        console.log(day1.wolf);
+        // → undefined
+        day1.wolf = false;
+        console.log(day1.wolf);
+        // → false
+        
+        let descriptions = {
+            work: "Went to work",
+            "touched tree": "Touched a tree"
+        };
+        console.log(descriptions.work);
+        // → Went to work
+        console.log(descriptions["touched tree"]);
+        // → Touched a tree
