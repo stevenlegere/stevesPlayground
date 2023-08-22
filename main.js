@@ -761,32 +761,3 @@ function phi(table) {
 console.log(phi([76, 9, 4, 1]));
 // → 0.068599434
 
-let JOURNAL = [
-    {
-        events: ["work", "touched tree", "pizza",
-            "running", "television"],
-        squirrel: false
-    },
-    {
-        events: ["work", "ice cream", "cauliflower",
-            "lasagna", "touched tree", "brused teeth"],
-        squirrel: false
-    },
-    {
-        events: ["weekend", "cycling", "break", "peanuts",
-            "beer"],
-        squirrel: true
-    },
-];
-function tableFor(event, journal) {
-    let table = [0, 0, 0, 0];
-    for (let i = 0; i < journal.length; i++) {
-        let entry = journal[i], index = 0;
-        if (entry.events.includes(event)) index += 2;
-        if (entry.squirrel) index += 2;
-        table[index] += 1;
-    }
-    return table;
-}
-console.log(tableFor("pizza", JOURNAL));
-// → [76, 9, 4, 1]
