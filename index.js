@@ -15,3 +15,23 @@ function tableFor(event, journal) {
 }
 console.log(tableFor("pizza", JOURNAL));
 // → [76, 9, 4, 1]
+
+//Loop to iterate through each entry in the JOURNAL array, displaying the number of events recorded in each entry
+for (let entry of JOURNAL) {
+    console.log(`${entry.events.length} events.`);
+}
+
+// Function journalEvents that extracts unique events from an array of journal entries' events, and then applies it to the JOURNAL array
+function journalEvents(journal) {
+    let events = [];
+    for (let entry of journal) {
+        for (let event of entry.events) {
+            if (!events.includes(event)) {
+                events.push(event);
+            }
+        }
+    }
+    return events;
+}
+console.log(journalEvents(JOURNAL));
+// → ["carrot", "exercise", "weekend", "bread", …]
