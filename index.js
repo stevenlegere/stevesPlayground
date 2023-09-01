@@ -46,7 +46,26 @@ function phi(table) {
 console.log(phi([76, 9, 4, 1]));
 // → 0.068599434
 
-
+// Iterates through each event in the JOURNAL and calculates and logs the value of the phi coefficient for that event's presence in the journal data using the tableFor and phi functions
 for (let event of journalEvents(JOURNAL)) {
     console.log(event + ":", phi(tableFor(event, JOURNAL)));
 }
+
+// Iterates through events in the JOURNAL, calculates the phi coefficient for each event's presence, and then logs events with a correlation greater than or less than 0.1 along with their correlation values.
+for (let event of journalEvents(JOURNAL)) {
+    let correlation = phi (tableFor(event, JOURNAL));
+    if (correlation > 0.1 || correlation < 0.1) {
+        console.log(event + ":", correlation);
+    }
+}
+
+// Searches through entries in the JOURNAL for occurrences where "peanuts" were consumed but "brushed teeth" was not, adds "peanut teeth" as an event to those entries, and then calculates and logs the phi coefficient for the "peanut teeth" event, which is equal to 1.
+for (let entry of JOURNAL) {
+    if (entry.events.includes("peanuts") &&
+    !entry.events.includes("brushed teeth"))
+    {
+        entry.events.push("peanut teeth")
+    }
+}
+console.log(phi(tableFor("peanut teeth", JOURNAL)));
+// 1
