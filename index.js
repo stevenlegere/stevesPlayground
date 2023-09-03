@@ -69,3 +69,4 @@ for (let entry of JOURNAL) {
 }
 console.log(phi(tableFor("peanut teeth", JOURNAL)));
 // 1
+

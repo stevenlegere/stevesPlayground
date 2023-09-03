@@ -761,3 +761,46 @@ function phi(table) {
 console.log(phi([76, 9, 4, 1]));
 // → 0.068599434
 
+
+// to-do list mechanism with an array called todoList and three functions: remember(task) to add tasks to the end of the list, getTask() to retrieve and remove the first task from the list, and rememberUrgently(task) to add tasks to the beginning of the list, simulating an urgent priority
+let todoList = []; 
+function remember(task) {
+    todoList.push(task);
+}
+function getTask() {
+    return todoList.shift();
+}
+function rememberUrgently(task) {
+    todoList.unshift(task);
+}
+
+// Add tasks
+remember("Buy groceries");
+remember("Finish report");
+
+// View the current to-do list
+console.log(todoList);
+
+// Complete a task
+const nextTask = getTask();
+console.log(`Completed task: ${nextTask}`);
+
+// Add an urgent task
+rememberUrgently("Call the plumber");
+
+// View the updated to-do list
+console.log(todoList);
+
+// indexOf() and lastIndexOf() methods on an array to find the index of the first occurrence and the index of the last occurrence
+console.log([1, 2, 3, 2, 1].indexOf(2));
+// -> 1
+console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+// -> 3
+
+
+// slice() method on an array to create a new array containing elements from the original array, specified by the provided indices
+console.log([0, 1, 2, 3, 4].slice(2, 4));
+// [2, 3]
+console.log([0, 1, 2, 3, 4].slice(2));
+// [2, 3, 4]
+
