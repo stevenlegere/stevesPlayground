@@ -804,3 +804,36 @@ console.log([0, 1, 2, 3, 4].slice(2, 4));
 console.log([0, 1, 2, 3, 4].slice(2));
 // [2, 3, 4]
 
+
+// concat() method to glue arrays together to create a new array
+function remove(array, index) {
+    return array.slice(0, index)
+    .concat(array.slice(index + 1));
+}
+console.log(remove(["a", "b", "c", "d", "e"], 2));
+// → ["a", "b", "d", "e"]
+
+
+console.log("coconuts".slice(4, 7));
+// → nut
+console.log("coconut".indexOf("u"));
+// → 5
+
+console.log("one two three".indexOf("ee"));
+// → 11
+
+let sentence = "Secretarybirds specialise in stopming";
+let words = sentence.split(" ");
+console.log(words);
+// → ["Secretarybirds", "specialise", "in", "stopming"]
+console.log(words.join(". "));
+// → Secretarybirds. specialise. in. stomping
+
+console.log("LA".repeat(3));
+// → LALALA
+
+let string = "abc";
+console.log(string.length);
+// → 3
+console.log(string[1]);
+// → b
