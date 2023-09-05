@@ -837,3 +837,24 @@ console.log(string.length);
 // → 3
 console.log(string[1]);
 // → b
+
+
+// Rest Parameters or spread operator
+// The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a way to represent variadic functions in JavaScript.
+function max(...numbers) {
+    let result = -Infinity;
+    for (let number of numbers) {
+        if (number > result) result = number;
+    }
+    return result;
+}
+console.log(max(4, 1, 9, -2));
+// → 9
+
+let numbers = [5, 1, 7];
+console.log(max(...numbers));
+// → 7
+
+let words2 = ['never', 'fully'];
+console.log(['will', ...words2, 'understand']);
+// → ["will", "never", "fully", "understand"]
