@@ -70,3 +70,15 @@ for (let entry of JOURNAL) {
 console.log(phi(tableFor("peanut teeth", JOURNAL)));
 // 1
 
+function phi([ n00, n01, n10, n11 ]) {
+    return (n11 * n00 - n10 * n01) /
+    Math.sqrt((n10 + n11) * (n00 + n01) *
+    (n01 + n11) * (n00 * n10));
+}
+const input = [10, 5, 3, 12];
+const result = phi(input);
+console.log(`phi coefficient for input [n00=${input[0]}, n01=${input[2]}, n11=${input[3]}]: ${result}`);
+
+let {name} = {name: "Faraji", age: 23};
+console.log(name);
+
