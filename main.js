@@ -877,3 +877,15 @@ console.log(Math.random());
 // Return a random whole number
 console.log(Math.floor(Math.random() * 10));
 // random integer between 0 (inclusive) and 9 (inclusive)
+
+// The sum of a Range
+// Write a range function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end
+function range(start, end) {
+    let array = [];
+    for (let i = start; i <= end; i++) {
+        array.push(i);
+    }
+    return array;
+};
+console.log(range(1, 10));
+// → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
