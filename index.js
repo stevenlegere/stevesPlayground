@@ -89,3 +89,35 @@ console.log(string);
 console.log(JSON.parse(string).events);
 // → ["weekend"]
 
+// A List
+let list = {
+    value: 1,
+    rest: {
+        value: 2,
+        rest: {
+            value: 3,
+            rest: null
+        }
+    }
+};
+console.log(list);
+
+// Write a functiom arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument
+function arrayToListArray (array) {
+    let list = null;
+    for (let i = array.length - 1; i >= 0; i--) {
+        list = {value: array[i], rest: list};
+    }
+    return list;
+}
+console.log(arrayToListArray([1, 2, 3]));
+
+// Write a function listToArray that produces an array from a list
+function listToArrayList (list) {
+    let array = [];
+    for (let node = list; node; node = node.rest) {
+        array.push(node.value);
+    }
+    return array;
+}
+console.log(listToArrayList(arrayToListArray([1, 2, 3])));
