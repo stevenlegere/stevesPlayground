@@ -2,6 +2,7 @@
 
 // This only works in node.js
 require('./journal.js')
+require('./scripts.js')
 
 function tableFor(event, journal) {
     let table = [0, 0, 0, 0];
@@ -199,3 +200,21 @@ repeat(3, n => {
         console.log(n, "is even");
     });
 });
+
+// Higher-Order Functions
+["A", "B"].forEach(l => console.log(l));
+// → A
+// → B
+
+// Filtering Arrays
+function filter(array, test) {
+    let passed = [];
+    for (let element of array) {
+        if (test(element)) {
+            passed.push(element);
+        }
+    }
+    return passed;
+}
+console.log(filter(SCRIPTS, script => script.living));
+// → [{name: "Adlam", …}, …]
