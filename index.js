@@ -206,15 +206,56 @@ repeat(3, n => {
 // → A
 // → B
 
-// Filtering Arrays
-function filter(array, test) {
-    let passed = [];
-    for (let element of array) {
-        if (test(element)) {
-            passed.push(element);
-        }
-    }
-    return passed;
+// // Filtering Arrays
+// function filter(array, test) {
+//     let passed = [];
+//     for (let element of array) {
+//         if (test(element)) {
+//             passed.push(element);
+//         }
+//     }
+//     return passed;
+// }
+// console.log(filter(SCRIPTS, script => script.living));
+// // → [{name: "Adlam", …}, …]
+
+let a = 10;
+console.log(a);
+
+let amount = 6;
+while (amount > 0) {
+    console.log(amount);
+    amount--;
 }
-console.log(filter(SCRIPTS, script => script.living));
-// → [{name: "Adlam", …}, …]
+
+let thisText = 'this text is a string';
+thisText.length;
+console.log(thisText.length);
+console.log(thisText[0]);
+console.log(thisText);
+
+const outOfTown = true;
+console.log(outOfTown);
+
+console.log(Math.random());
+console.log(Math.random() * 10);
+
+const weeksInYear = Math.floor(365 / 7);
+const daysLeftOver = 365 % 7;
+console.log('a year has ' + `${weeksInYear}` + ' weeks');
+console.log('a year has ' + `${weeksInYear}` + ' weeks and ' + `${daysLeftOver}` + ' days');
+
+let age = 42;
+// string interpolation
+console.log(`I am ${age} years old`);
+// string concatenation
+console.log('I am ' + age + ' years old');
+
+function checkObj(obj, checkProp) {
+    if (obj.hasOwnProperty(checkProp)) {
+        return obj[checkProp];
+    } else {
+        return "Not Found";
+    }
+}
+console.log(checkObj({ gift : "pony", pet : "kitten", bed : "sleep" }, "gift"));
