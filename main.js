@@ -889,3 +889,41 @@ function range(start, end) {
 };
 console.log(range(1, 10));
 // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+alert("Ola");
+
+let alertName = "Angela";
+alert(`Ola ${alertName}`);
+
+let firstName = prompt("What is your first name");
+let lastName = prompt("What is your last name");
+let fullName = firstName + " " + lastName;
+alert(fullName);
+
+let country = prompt("What country are you from?");
+
+if (country === "Portugal") {
+    alert("You are cool");
+}
+if (country !== "Portugal") {
+    alert("Too bad");
+};
+
+let age18 = 18;
+
+if (age18 >= 18) {
+    console.log("You are old enough to drive");
+} else {
+    console.log("You are not old enough to drive");
+};
+
+1 + 2 === 4;
+console.log(1 + 2 === 4);
+// → false
+
+let ageLogicalOr = 19
+let genderLogicalOr = "male"
+if (ageLogicalOr < 18 || genderLogicalOr === "male") {
+    console.log("You can't join SheCodes 👩‍💻");
+  };
+

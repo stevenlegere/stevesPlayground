@@ -259,3 +259,18 @@ function checkObj(obj, checkProp) {
     }
 }
 console.log(checkObj({ gift : "pony", pet : "kitten", bed : "sleep" }, "gift"));
+
+
+let students = ["Kate", "Julie", "Mariana"];
+
+let Kate = {
+    firstName: "Kate",
+    lastName: "Johsnson",
+    age: 23,
+    canCode: true,
+};
+console.log(Kate.canCode);
+
+if (age < 18 || gender === "male" ) {
+    console.log("Sorry, no men allowed")
+};
