@@ -921,9 +921,45 @@ if (age18 >= 18) {
 console.log(1 + 2 === 4);
 // → false
 
+// Logical Or
 let ageLogicalOr = 19
 let genderLogicalOr = "male"
-if (ageLogicalOr < 18 || genderLogicalOr === "male") {
+if (ageLogicalOr < 19 || genderLogicalOr === "male") {
     console.log("You can't join SheCodes 👩‍💻");
   };
+
+// ageElseIf else if
+// Nested if statements
+let ageElseIf = 17;
+if (ageElseIf < 18) {
+    console.log("Too young");
+} else if (ageElseIf > 80) {
+    console.log("Too old");
+} else {
+    console.log("You can join");
+}
+
+// ageFuncElseIf else if
+function ageFuncElseIf(age) {
+    let resultAgeFuncElseIf;
+    if (age < 18) {
+        resultAgeFuncElseIf = "Too young";
+    } else if (age > 80) {
+        resultAgeFuncElseIf = "Too old";
+    } else {
+        resultAgeFuncElseIf = "You can join";
+    }
+    return resultAgeFuncElseIf;
+};
+console.log(ageFuncElseIf(18));
+
+let monday = "school";
+let tuesday = "school";
+// Logical And
+if (monday === "school" && tuesday === "school") {
+    console.log("Go to school");
+}
+
+
+
 
