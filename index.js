@@ -271,6 +271,66 @@ let Kate = {
 };
 console.log(Kate.canCode);
 
-if (age < 18 || gender === "male" ) {
-    console.log("Sorry, no men allowed")
+
+let myList = [];
+let fruits = ["apples", "oranges", "bananas"];
+myList = ["bananas", 3, "go", ['John', 'Doe'], {'firstName': 'John', 'lastName': 'Smith'}];
+console.log(myList);
+
+let nextTown = [
+    {
+        "town": "Margate",
+        "population": 65000,
+    },
+    {
+        "town": "Ramsgate",
+        "population": 42000,
+    },
+    {
+        "town": "Broadstairs",
+        "population": 25000,
+    }
+];
+console.log(nextTown[0].population, nextTown[0].town);
+console.log(nextTown[1].population);
+
+
+const howManyMiles = (miles, km) => {
+    let milesAndKm =
+    [
+        {
+            "miles": 99,
+            "km": 160,
+        },
+        {
+            "miles": 125,
+            "km": 201,
+        },
+        {
+            "miles": 150,
+            "km": 241,
+        },
+    ]
+    return milesAndKm;
 };
+const resultOfMiles = howManyMiles();
+console.log(resultOfMiles[0].km);
+
+
+const whichMotorway = (motorway) => {
+    let motorways = [
+        {
+            "motorway": "M1",
+        },
+        {
+            "motorway": "M25",
+        },
+        {   
+            "motorway": "M4",
+        },
+    ]
+    return motorways;
+};
+const resultOfMotorway = whichMotorway();
+console.log(resultOfMotorway[0].motorway);
+module.exports = whichMotorway;
