@@ -1,4 +1,4 @@
-const whichMotorway = (motorway) => {
+const whichMotorway = () => {
     let motorways = [
         {
             "motorway": "M1",
@@ -10,7 +10,7 @@ const whichMotorway = (motorway) => {
             "motorway": "M4",
         },
     ]
-    return motorways;
+    return (motorways);
 };
 const resultOfMotorway = whichMotorway();
 console.log(resultOfMotorway[0].motorway);

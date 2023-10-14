@@ -29,7 +29,10 @@ const whichMotorway = require('./whichMotorway');
 
 describe('whichMotorway function tests', () => {
   test('it should return and array of motorways', () => {
+    // Arrange (Empty, as function doesn't require input)
+    // Act
     const resultOfMotorway = whichMotorway();
+    // Assert
     expect(resultOfMotorway).toEqual([
       {
           "motorway": "M1",
@@ -41,6 +44,17 @@ describe('whichMotorway function tests', () => {
           "motorway": "M4",
       },
   ])
+});
+
+// test for empty array
+test('It should return an empty array', () => {
+  // Arrange
+  // Act 
+    // call the function
+  // Assert
+    // check the result
+  const resultOfMotorway = whichMotorway();
+  expect(resultOfMotorway).toEqual([]);
 });
 });
 
