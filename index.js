@@ -359,3 +359,62 @@ const materialsForWardrobe = (material) => {
 const resultOfMaterials = materialsForWardrobe();
 console.log(resultOfMaterials[0].material, resultOfMaterials[0].price, resultOfMaterials[0].quantity);
 
+
+// Function that accepts parameters
+    // This function allows you to pass in parameters when you call it
+const woodForWardrobes = (material, price, quantity) => {
+    return {
+        "material": material,
+        "price": price,
+        "quantity": quantity,
+    };
+}
+const material1 = woodForWardrobes("birch plywood", 15, 50);
+const material2 = woodForWardrobes("hex screws", 25, 200);
+console.log(material1, material2);
+
+
+let times = 0;
+while (times <= 10) {
+    console.log(times);
+    times = times + 1;
+};
+
+let countToTen = (start) => {
+    while (start < 10) {
+        console.log(start);
+        start = start + 1;
+    }
+    return start;
+};
+console.log(countToTen(0));
+
+// forEach loop
+let fruitsForEach = ['apples', 'oranges', 'bananas'];
+fruitsForEach.forEach(function(fruit) {
+    console.log("I have " + fruit + " in my basket");
+});
+
+// forEach loop with arrow function
+let fruitsForEachArrow = ['apples', 'oranges', 'bananas'];
+fruitsForEachArrow.forEach((fruit) => {
+    console.log("I have " + fruit + " In my shopping bag");
+});
+
+// do while loop
+let numbers = 1;
+let timesx = 1;
+do {
+    console.log(numbers);
+    numbers = numbers + 1;
+    timesx = timesx + 1;
+} while(timesx <= 9);
+console.log(timesx);
+
+let resulto = '';
+let i = 0;
+do {
+    i = i + 1;
+    resulto = resulto + i;
+} while (i < 5);
+console.log(resulto);

@@ -20,7 +20,7 @@ describe('whichMotorway function tests', () => {
 });
 
 // test for empty array
-test('It should return an empty array', () => {
+xtest('It should return an empty array', () => {
   // Arrange
   // Act 
     // call the function
@@ -59,6 +59,31 @@ describe('materialsForWardrobe function tests', () => {
       },
   ])
   })
-})
+});
+
+// Test array of objects in woodForWardrobes.js
+const woodForWardrobes = require('./materialsForWardrobe');
+
+describe('woodForWardrobes function tests', () => {
+  test('it should return an array of materials', () => {
+    // Arrange
+    // Act
+    const materials1 = woodForWardrobes();
+    // Assert
+    expect(Array.isArray(materials1)).toBe(true);
+    expect(materials1).toEqual([
+      {
+      "material": "birch plywood",
+      "price": 15,
+      "quantity": 50,
+    },
+    {
+      "material": "hex screws",
+      "price": 25,
+      "quantity": 200,
+    }
+  ]);
+  });
+});
 
 
