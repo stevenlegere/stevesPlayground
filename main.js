@@ -960,6 +960,9 @@ if (monday === "school" && tuesday === "school") {
     console.log("Go to school");
 }
 
+// Current date and time
+let now = new Date();
+console.log(now);
 
 
 

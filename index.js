@@ -418,3 +418,65 @@ do {
     resulto = resulto + i;
 } while (i < 5);
 console.log(resulto);
+
+// for loop
+for (let i = 0; i < 10; i++) {
+    console.log("i is " + i);
+}
+
+const myNewList = () => {
+    const myList = ["apples", "oranges", "bananas"];
+for (let i = 0; i < myList.length; i++) {
+    console.log("I have " + myList[i] +  " in my shopping bag");
+    }
+    return myList;
+}
+console.log(myNewList());
+
+// Get current time
+let now = new Date();
+console.log(now);
+
+// Numbers
+    // Round
+    Math.round();
+    console.log(Math.round(5.7));
+    // Floor
+    Math.floor(4.7);
+    // Ceil
+    Math.ceil(4.7);
+
+
+    // Objects
+        // Creating a new object
+    const myObject = {} // object literal
+    let fruit = new Object(); // object constructor
+    let student = {
+        firstName: "Sandra",
+        lastName: "Smith",
+    };
+    console.log(student.firstName);
+
+    // Adding properties to an object
+    student.age = 23;
+
+    // Deleting properties from an object
+    delete student.age;
+
+    // Object arrays
+    let users = [
+        {
+            firstName: "Bradley",
+        lastName: "Cooper",
+    },
+    {
+        firstName: "Lady",
+        lastName: "Gaga",
+    },
+    ];
+
+    users.forEach(function(user, index) {
+        for (let prop in user) {
+            console.log(prop + " is " + user[prop]);
+        }
+    });
