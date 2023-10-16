@@ -139,8 +139,8 @@ function deepEqual(a, b) {
 }
 console.log(
     deepEqual(
-      { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } },
-      { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }
+        { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } },
+        { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }
     )
 );
 
@@ -258,7 +258,7 @@ function checkObj(obj, checkProp) {
         return "Not Found";
     }
 }
-console.log(checkObj({ gift : "pony", pet : "kitten", bed : "sleep" }, "gift"));
+console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleep" }, "gift"));
 
 
 let students = ["Kate", "Julie", "Mariana"];
@@ -274,7 +274,7 @@ console.log(Kate.canCode);
 
 let myList = [];
 let fruits = ["apples", "oranges", "bananas"];
-myList = ["bananas", 3, "go", ['John', 'Doe'], {'firstName': 'John', 'lastName': 'Smith'}];
+myList = ["bananas", 3, "go", ['John', 'Doe'], { 'firstName': 'John', 'lastName': 'Smith' }];
 console.log(myList);
 
 let nextTown = [
@@ -297,20 +297,20 @@ console.log(nextTown[1].population);
 
 const howManyMiles = (miles, km) => {
     let milesAndKm =
-    [
-        {
-            "miles": 99,
-            "km": 160,
-        },
-        {
-            "miles": 125,
-            "km": 201,
-        },
-        {
-            "miles": 150,
-            "km": 241,
-        },
-    ]
+        [
+            {
+                "miles": 99,
+                "km": 160,
+            },
+            {
+                "miles": 125,
+                "km": 201,
+            },
+            {
+                "miles": 150,
+                "km": 241,
+            },
+        ]
     return milesAndKm;
 };
 const resultOfMiles = howManyMiles();
@@ -325,7 +325,7 @@ const whichMotorway = (motorway) => {
         {
             "motorway": "M25",
         },
-        {   
+        {
             "motorway": "M4",
         },
     ]
@@ -361,7 +361,7 @@ console.log(resultOfMaterials[0].material, resultOfMaterials[0].price, resultOfM
 
 
 // Function that accepts parameters
-    // This function allows you to pass in parameters when you call it
+// This function allows you to pass in parameters when you call it
 const woodForWardrobes = (material, price, quantity) => {
     return {
         "material": material,
@@ -391,7 +391,7 @@ console.log(countToTen(0));
 
 // forEach loop
 let fruitsForEach = ['apples', 'oranges', 'bananas'];
-fruitsForEach.forEach(function(fruit) {
+fruitsForEach.forEach(function (fruit) {
     console.log("I have " + fruit + " in my basket");
 });
 
@@ -408,7 +408,7 @@ do {
     console.log(numbers);
     numbers = numbers + 1;
     timesx = timesx + 1;
-} while(timesx <= 9);
+} while (timesx <= 9);
 console.log(timesx);
 
 let resulto = '';
@@ -426,8 +426,8 @@ for (let i = 0; i < 10; i++) {
 
 const myNewList = () => {
     const myList = ["apples", "oranges", "bananas"];
-for (let i = 0; i < myList.length; i++) {
-    console.log("I have " + myList[i] +  " in my shopping bag");
+    for (let i = 0; i < myList.length; i++) {
+        console.log("I have " + myList[i] + " in my shopping bag");
     }
     return myList;
 }
@@ -438,45 +438,57 @@ let now = new Date();
 console.log(now);
 
 // Numbers
-    // Round
-    Math.round();
-    console.log(Math.round(5.7));
-    // Floor
-    Math.floor(4.7);
-    // Ceil
-    Math.ceil(4.7);
+// Round
+Math.round();
+console.log(Math.round(5.7));
+// Floor
+Math.floor(4.7);
+// Ceil
+Math.ceil(4.7);
 
 
-    // Objects
-        // Creating a new object
-    const myObject = {} // object literal
-    let fruit = new Object(); // object constructor
-    let student = {
-        firstName: "Sandra",
-        lastName: "Smith",
-    };
-    console.log(student.firstName);
+// Objects
+// Creating a new object
+const myObject = {} // object literal
+let fruit = new Object(); // object constructor
+let student = {
+    firstName: "Sandra",
+    lastName: "Smith",
+};
+console.log(student.firstName);
 
-    // Adding properties to an object
-    student.age = 23;
+// Adding properties to an object
+student.age = 23;
 
-    // Deleting properties from an object
-    delete student.age;
+// Deleting properties from an object
+delete student.age;
 
-    // Object arrays
-    let users = [
-        {
-            firstName: "Bradley",
+// Object arrays
+let users = [
+    {
+        firstName: "Bradley",
         lastName: "Cooper",
     },
     {
         firstName: "Lady",
         lastName: "Gaga",
     },
-    ];
+];
 
-    users.forEach(function(user, index) {
-        for (let prop in user) {
-            console.log(prop + " is " + user[prop]);
-        }
-    });
+users.forEach(function (user, index) {
+    for (let prop in user) {
+        console.log(prop + " is " + user[prop]);
+    }
+});
+
+// Nested function. A function inside a function
+
+function hello() {
+    function go(name) {
+        return (name);
+    }
+
+    let name = "SheCodes";
+    console.log("Hello " + go(name));
+}
+hello(); // invoke the function
