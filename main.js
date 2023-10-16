@@ -54,7 +54,7 @@ const carName3 = `Saab`
 // Declaring muliple variables in a single statement //
 function superHuman() {
     let superWomanIs = {
-        charector: "Super Woman",
+        character: "Super Woman",
         SuperPower: "fly",
         WhereToo: "around the world",
         HowOld: 26

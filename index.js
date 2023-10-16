@@ -581,6 +581,38 @@ const foods = ["banana", "apple", "orange", "broccoli", "bread", "beetroot"];
 // Create a function that iterates throught the array and returns a new array with only the foods thay begin with the letter b
 const foodsThatStartWithB = foods.filter(foods => foods.startsWith("b"));
 console.log(foodsThatStartWithB);
-    
 
+
+// Using .every() method check if every number in the array is a multiple of 7
+const sevenTimesTable = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70];
+
+let isMultipleOfSeven = sevenTimesTable.every(sevenTimesTable => sevenTimesTable % 7 === 0);
+console.log(isMultipleOfSeven);
+// true
+
+ // Using the .every() method check if every number in the seventySevenTimesTable is a multiple of 77
+ const seventySevenTimesTable = [77, 154, 231, 308, 385, 461, 539, 616, 693, 770];
+ let isMultipleOfSeventySeven = seventySevenTimesTable.every(seventySevenTimesTable => seventySevenTimesTable % 7 === 0);
+ console.log(isMultipleOfSeventySeven);
+ // false 
+// Find the false value in the seventySevenTimesTable array
+// Use the .findIndex() mehod to identify the fasle value
+const falseValue = seventySevenTimesTable.findIndex(seventySevenTimesTable => seventySevenTimesTable % 7 !== 0);
+console.log(falseValue);
+// 5
+
+
+// Given an array of numbers, return the difference between the largest and smallest values
+const smallestAndBiggest = [1, 2, 3, 4, 5];
+// Search for the smallest number in the array
+const smallest = Math.min(...smallestAndBiggest);
+console.log(smallest);
+// 1
+// Search for the biggest number in the array
+const biggest = Math.max(...smallestAndBiggest);
+console.log(biggest);
+// 5
+
+ 
+ 
 
