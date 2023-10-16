@@ -494,3 +494,93 @@ function hello() {
 hello(); // invoke the function
 
 
+// Codewars kata
+// Write a method that accepts a list of objects of type Animal, and returns a new list. The new list shoulf be a copy of the original list, sorted first by the animal's number of legs, and then by it's name.
+
+// This code passed the test
+// class Animal {
+//     constructor(name, numberOfLegs) {
+//       this.name = name;
+//       this.numberOfLegs = numberOfLegs;
+//       }
+//     }
+    
+//     // Custom sorting function
+//     function sortAnimal(animals) {
+//       // Check id the list is empty
+//       if(animals.length === 0) {
+//         return [];
+//       }
+      
+//       // Custom sorting function
+//       function customSortAnimal(a, b) {
+//        // Compare the number of legs
+//         const legsComparison = a.numberOfLegs - b.numberOfLegs;
+//         if (legsComparison !== 0) {
+//           return legsComparison;
+//         }
+//         // If the number of legs is the same, compare the name
+//         return a.name.localeCompare(b.name);
+//       }
+      
+//       // Sort the list using the custom sorting function
+//       const sortedAnimal = animals.slice(); // Shallow copt if the original list
+//       sortedAnimal.sort(customSortAnimal);
+      
+//       return sortedAnimal
+      
+//       }
+
+
+// This code was other solution that was more concise
+class Animal {
+    constructor(name, numberOfLegs) {
+        this.name = name;
+        this.numberOfLegs = numberOfLegs;
+    }
+}
+
+const compareAnimals = (a, b) => 
+    a.numberOfLegs - b.numberOfLegs || a.name.localeCompare(b.name);
+
+    const sortAnimal = animals =>
+    animals ? animals.slice().sort(compareAnimals) : null;
+
+      const animals = [
+        new Animal("Cat", 4),
+        new Animal("Snake", 0),
+        new Animal("Dog", 4),
+        new Animal("Pig", 4),
+        new Animal("Human", 2),
+        new Animal("Bird", 2)
+    ];
+    
+    const sortedAnimals = sortAnimal(animals);
+    console.log(sortedAnimals);
+
+
+
+const languages = ["javaScript", "SQL", "cat purrs", "c#", "Go"];
+
+const accurateLanguages = [
+	...languages.slice(0, 2),
+    "Python",
+	...languages.slice(3)
+];
+console.log(accurateLanguages);
+
+
+// Write a function that takes in an array and returns a new array with all elements turned to uppercase
+const cats = ["tony", "daisy", "twitchy", "charles", "sneaks"];
+const uppercaseCats = cats.map(cats => cats.toUpperCase());
+console.log(uppercaseCats);
+
+
+// Create an array that contains foods, some of which begin with the letter 'b'
+const foods = ["banana", "apple", "orange", "broccoli", "bread", "beetroot"];
+// Create a function that iterates throught the array and returns a new array with only the foods thay begin with the letter b
+const foodsThatStartWithB = foods.filter(foods => foods.startsWith("b"));
+console.log(foodsThatStartWithB);
+    
+
+

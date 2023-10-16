@@ -980,6 +980,10 @@ console.log(paragraph);
 let lis = document.querySelectorAll("li");
 console.log(lis);
 
+let specialList = document.querySelector("#special");
+let paragraphs = specialList.querySelectorAll("li p");
+console.log(paragraphs);
+
 
 // Return first instance of .day
 let day = document.querySelector(".day");
@@ -993,6 +997,8 @@ function sayHi() {
 }
 let element = document.querySelector("#city");
 element.addEventListener("click", sayHi);
+
+
 
 
 
