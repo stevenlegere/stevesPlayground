@@ -964,6 +964,37 @@ if (monday === "school" && tuesday === "school") {
 let now = new Date();
 console.log(now);
 
+// Return first instance of list item
+let li = document.querySelector("li");
+console.log(li);
+
+// Update list item
+li.textContent = "Hello World!";
+console.log(li);
+
+// Return first instance of paragraph
+let paragraph = document.querySelector("ul#list p");
+console.log(paragraph);
+
+// QuerySelectorAll
+let lis = document.querySelectorAll("li");
+console.log(lis);
+
+
+// Return first instance of .day
+let day = document.querySelector(".day");
+// UPdate .day in the DOM
+day.textContent = "Today is a sunny day ☀️";
+console.log(day);
+
+// Create and eventListener
+function sayHi() {
+    alert("Hi");
+}
+let element = document.querySelector("#city");
+element.addEventListener("click", sayHi);
+
+
 
 
 
