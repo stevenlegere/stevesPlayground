@@ -724,3 +724,48 @@ if (index !== -1) {
     removeANumber.splice(index, 1);
 }
 console.log(removeANumber);
+
+// Setup
+const recordCollection = {
+    2548: {
+      albumTitle: 'Slippery When Wet',
+      artist: 'Bon Jovi',
+      tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    },
+    2468: {
+      albumTitle: '1999',
+      artist: 'Prince',
+      tracks: ['1999', 'Little Red Corvette']
+    },
+    1245: {
+      artist: 'Robert Palmer',
+      tracks: []
+    },
+    5439: {
+      albumTitle: 'ABBA Gold'
+    }
+  };
+  
+  // Only change code below this line
+  function updateRecords(records, id, prop, value) {
+    // function must always return the entire records object
+    // if value is an empty string, delete the given prop property from the album
+    // If the prop isn't tracks and value isn't an empty string, assign the value to that album's prop
+    // if prop is tracks and value isn't an empty string, you need to update the album's tracks array. First the album does not have a tracks property, assign it an empty array. Then add the value as the last item in the album's tracks array.
+    if (prop !== "tracks" && value !== "") {
+        records[id][prop] = value;
+    } 
+    else if (prop === "tracks" && records[id].hasOwnProperty("tracks") === false) {
+        records[id][prop] = [value];
+    } 
+    else if (prop === "tracks" && value !== "") {
+        records[id][prop].push(value);
+    } 
+    else if (value === "") {
+        delete records[id][prop];
+    }
+    return records;
+  }
+  console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+  
+//   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
