@@ -673,3 +673,54 @@ function iteratesThrough() {
     }
 }
 iteratesThrough();
+
+// Reverse Array
+const data = [1, 2, 3, 4, 5];
+const resultArray = data.reverse();
+
+console.log(resultArray);
+// [5, 4, 3, 2, 1]
+
+function reverseArray(array) {
+    const data = [1, 2, 3, 4, 5];
+    const resultArray = data.reverse();
+    return resultArray;
+}
+console.log(reverseArray());
+// [5, 4, 3, 2, 1]
+
+// Reverse Array with arrow function
+const reverseArrayArrow = () => {
+    const data = [1, 2, 3, 4, 5];
+    const resultArray = data.reverse();
+    return resultArray;
+}
+console.log(reverseArrayArrow());
+
+
+// Using the .push method add the number 6 to the end of an array
+const amountOfPeople = [1, 2, 3, 4, 5];
+function addNumber() {
+    amountOfPeople.push(6);
+    return amountOfPeople;
+}
+console.log(addNumber());
+
+// Using the .pop() method remove the last number from an array
+function removeNumber() {
+    amountOfPeople.pop();
+    return amountOfPeople;
+}
+console.log(removeNumber());
+
+
+// Remove array number using the .splice() method
+const removeANumber = [1, 2, 3, 4, 5];
+const elementToRemove = 3;
+
+const index = removeANumber.indexOf(elementToRemove);
+
+if (index !== -1) {
+    removeANumber.splice(index, 1);
+}
+console.log(removeANumber);
