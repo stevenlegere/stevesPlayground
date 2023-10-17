@@ -613,6 +613,63 @@ const biggest = Math.max(...smallestAndBiggest);
 console.log(biggest);
 // 5
 
- 
+let isRaining = "true";
+if (isRaining === "true") {
+	console.log("Pack your umbrella");
+} else {
+	console.log("Wear your favourite T");
+};
+
+const numberValue = 42;
+const stringValue = "42";
+if (numberValue == stringValue) {
+    console.log("Loosley equal");
+};
+
+const greetThis = () => {
+	return "Hello Steve";
+}
+console.log(greetThis());
  
 
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Skoda"];
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+	text += cars[i] + " ";
+};
+console.log(cars[1]);
+
+
+
+function iterateIAndJ() {
+    let i = 0;
+    let j = 10;
+
+    while (i < 4) {
+        i += 1;
+        checkj: while (j > 1) {
+            j -= 1;
+            if (j % 2 === 0) {
+                continue checkj;
+            }
+            console.log(j, "is odd.");
+        }
+    }
+};
+iterateIAndJ();
+//  checkj: is a label used to specify which loop should continue when the continue statement is encountered
+
+
+
+function iteratesThrough() {
+    const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    let theValue = 5;
+
+    for (let i = 0; i < a.length; i++) {
+        console.log(`Iteration $[i]: comparing ${a[i]} with ${theValue}`);
+        if (a[i] === theValue) {
+            break;
+        }
+    }
+}
+iteratesThrough();
