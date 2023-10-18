@@ -746,7 +746,7 @@ const recordCollection = {
     }
   };
   
-  // Only change code below this line
+  // free code camp challenge to update the record collection
   function updateRecords(records, id, prop, value) {
     // function must always return the entire records object
     // if value is an empty string, delete the given prop property from the album
@@ -755,7 +755,7 @@ const recordCollection = {
     if (prop !== "tracks" && value !== "") {
         records[id][prop] = value;
     } 
-    else if (prop === "tracks" && records[id].hasOwnProperty("tracks") === false) {
+    else if (prop === "tracks" && !records[id].hasOwnProperty("tracks")) {
         records[id][prop] = [value];
     } 
     else if (prop === "tracks" && value !== "") {
@@ -766,6 +766,8 @@ const recordCollection = {
     }
     return records;
   }
+
+  updateRecords(recordCollection, 5439, 'artist', 'ABBA');
   console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
   
 //   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
