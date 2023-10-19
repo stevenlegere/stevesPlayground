@@ -771,3 +771,32 @@ const recordCollection = {
   console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
   
 //   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+
+// Multiplication with nested arrays
+  // Use a for loop to multiply each number in the sub-arrays
+function multiplyAll(arr) {
+    let product =1;
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            product *= arr[i][j];
+        }
+    }
+    return product;
+}
+console.log(multiplyAll([[1], [2], [3]])); // Output: 6
+console.log(multiplyAll([[1, 2], [3, 4], [5, 6, 7]])); // Output: 5040
+console.log(multiplyAll([[5, 1], [0.2, 4, 0.5], [3, 9]])); // // Output: 54
+
+
+// do...while loop, the code will push the number 10 into myArray and increment i to 11 when the loop is finished.
+const myDoWhileArray = [];
+let iDoWhile = 10;
+
+do {
+    myDoWhileArray.push(i);
+    iDoWhile++;
+} while (iDoWhile < 11); // Use a do...while loop to execute the code at least once and push 10 into myArray
+console.log(myDoWhileArray);
+console.log(iDoWhile);
