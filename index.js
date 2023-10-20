@@ -800,3 +800,70 @@ do {
 } while (iDoWhile < 11); // Use a do...while loop to execute the code at least once and push 10 into myArray
 console.log(myDoWhileArray);
 console.log(iDoWhile);
+
+// Recursive function
+    // a function that calls itself during its execution
+function sum(arr, n) {
+    if (n === 0) {
+        return 0;
+    }
+    if (n === 1) {
+        return arr[0];
+    }
+    return sum(arr, n - 1) + arr[n - 1];
+}
+console.log(sum([1], 0)); // Output: 0
+console.log(sum([2, 3, 4], 1)); // Output: 2
+console.log(sum([2, 3, 4, 5], 3)); // Output: 9
+
+// Contacts look up using for loop and if statement
+// Setup
+const contacts = [
+    {
+        firstName: "Akira",
+        lastName: "Laine",
+        number: "0543236543",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+        firstName: "Harry",
+        lastName: "Potter",
+        number: "0994372684",
+        likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "0487345643",
+        likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+        firstName: "Kristian",
+        lastName: "Vos",
+        number: "unknown",
+        likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+];
+
+function lookUpProfile(name, prop) {
+    // Loop through the contacts array
+    for (let i = 0; i < contacts.length; i++) {
+        // Check if the contacts first name matches the given name
+    if (contacts[i].firstName === name) {
+        // Check is the property prop exists in the contact
+        if (contacts[i].hasOwnProperty(prop)) {
+            // Return the value property
+            return contacts[i][prop];
+        } else {
+            // If the property does not exist, return 'No such property'
+            return "No such property";
+        }
+    }
+    }
+    // If no matching contact is founf, return "No such contact"
+    return "No such contact";
+}
+lookUpProfile("Akira", "likes");
+console.log(lookUpProfile("Akira", "likes"));
+console.log(lookUpProfile("Kristian", "lastName"));
+console.log(lookUpProfile("Sherlock", "likes"));
