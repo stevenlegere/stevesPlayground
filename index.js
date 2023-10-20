@@ -867,3 +867,31 @@ lookUpProfile("Akira", "likes");
 console.log(lookUpProfile("Akira", "likes"));
 console.log(lookUpProfile("Kristian", "lastName"));
 console.log(lookUpProfile("Sherlock", "likes"));
+
+// Return random fractions
+function randomFraction() {
+    return Math.random();
+}
+console.log(randomFraction());
+
+// Generate Random Whole Numbers
+// Use Math.random() to generate a random decimal
+// Multiply that random decimal by 20
+// Use another function, Math.floor() to round the number down to its nearest whole number
+// Multiply the result by 1 to make the result a whole number
+// The result is a random whole number between 0 and 19
+function randomWholeNum() {
+    return Math.floor(Math.random() * 20);
+}
+console.log(randomWholeNum());
+
+// Generate Random Whole Numbers within a Range
+// Instead of generating a random whole number between zero and a given number like we did before, we can generate a random whole number that falls within a range of two specific numbers
+// To do this, we'll define a minimum number min and a maximum number max
+// Here's the formula we'll use
+// Math.floor(Math.random() * (max - min + 1)) + min
+function randomRange(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+console.log(randomRange(1, 10));
+
