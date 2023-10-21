@@ -895,3 +895,65 @@ function randomRange(myMin, myMax) {
 }
 console.log(randomRange(1, 10));
 
+// Use the parseInt function
+// The parseInt() function parses a string and returns an integer
+// Here's an example
+function convertToInteger(str) {
+    return parseInt(str);
+}
+convertToInteger("56");
+console.log(convertToInteger("56"));
+
+// Use the parseInt function with a Radix
+// The parseInt() function parses a string and returns an integer
+// It takes a second argument for the radix, which specifies the base of the number in the string
+// The radix can be an integer between 2 and 36
+// The function call looks like:
+function convertToInteger(str) {
+    return parseInt(str, 2);
+}
+convertToInteger("10011");
+console.log(convertToInteger("10011"));
+
+// Ternary Operator
+// Example A will be written as a regular if...else statement
+    // Example B will be written as a ternary operator
+// Example A
+function findGreater (a, b) {
+    if(a > b) {
+        return "a is greater";
+    } else {
+        return "b is greater";
+    }
+}
+console.log(findGreater(5, 10));
+
+// Example B ternary operator
+    // Ternary operator if a conditional operator that assigns a value to a variable based on some condition
+function findGreaterTernary(a, b) {
+    return a > b ? "a is greater" : "b is greater or equal";
+}
+console.log(findGreaterTernary(5, 10));
+
+// Ternary Operator
+function checkEqual(a, b) {
+    return a === b ? "Equal" : "Not Equal";
+}
+console.log(checkEqual(1, 2));
+
+// Multiple Ternary Operators
+function findGreaterOrEqual(a, b) {
+    return (a === b) ? "a and b are equal"
+    : (a > b) ? "a is greater"
+    : "b is greater";
+};
+console.log(findGreaterOrEqual(5, 10));
+
+// Ternary Operator
+function checkSign(num) {
+    return num > 0 ? " positive"
+    : num < 0 ? "negative"
+    : "zero";
+}
+console.log(checkSign(10));
+
