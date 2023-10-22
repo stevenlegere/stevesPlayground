@@ -666,7 +666,7 @@ function iteratesThrough() {
     let theValue = 5;
 
     for (let i = 0; i < a.length; i++) {
-        console.log(`Iteration $[i]: comparing ${a[i]} with ${theValue}`);
+        console.log(`Iteration ${[i]}: comparing ${a[i]} with ${theValue}`);
         if (a[i] === theValue) {
             break;
         }
@@ -776,7 +776,7 @@ const recordCollection = {
 // Multiplication with nested arrays
   // Use a for loop to multiply each number in the sub-arrays
 function multiplyAll(arr) {
-    let product =1;
+    let product = 1;
 
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++) {
@@ -795,7 +795,7 @@ const myDoWhileArray = [];
 let iDoWhile = 10;
 
 do {
-    myDoWhileArray.push(i);
+    myDoWhileArray.push(iDoWhile);
     iDoWhile++;
 } while (iDoWhile < 11); // Use a do...while loop to execute the code at least once and push 10 into myArray
 console.log(myDoWhileArray);
