@@ -886,28 +886,28 @@ function randomWholeNum() {
 console.log(randomWholeNum());
 
 // Generate Random Whole Numbers within a Range
-// Instead of generating a random whole number between zero and a given number like we did before, we can generate a random whole number that falls within a range of two specific numbers
-// To do this, we'll define a minimum number min and a maximum number max
-// Here's the formula we'll use
+// generate a random whole number that falls within a range of two specific numbers
+// To do this, we'll define a minimum number min and a maximum number 
 // Math.floor(Math.random() * (max - min + 1)) + min
 function randomRange(myMin, myMax) {
     return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
 }
-console.log(randomRange(1, 10));
+console.log(randomRange(1, 100));
 
 // Use the parseInt function
 // The parseInt() function parses a string and returns an integer
 // Here's an example
-function convertToInteger(str) {
+function convertToIntegerParseInt(str) {
     return parseInt(str);
 }
-convertToInteger("56");
-console.log(convertToInteger("56"));
+convertToIntegerParseInt("6");
+console.log(convertToIntegerParseInt('6'));
 
 // Use the parseInt function with a Radix
 // The parseInt() function parses a string and returns an integer
 // It takes a second argument for the radix, which specifies the base of the number in the string
 // The radix can be an integer between 2 and 36
+// Radix 2 is used for binary number system
 // The function call looks like:
 function convertToInteger(str) {
     return parseInt(str, 2);
