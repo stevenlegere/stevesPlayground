@@ -178,7 +178,7 @@ console.log(simpsonsFamily[1] = "Marjorie");
 // This has changed Marge to Majorie outside of original array //
 
 let myVariableBank = 100;
-const accStatement = ("My bank account has £${myVariableBank}");
+const accStatement = (`My bank account has £${myVariableBank}`);
 console.log(accStatement);
 // Variables with variable data type. In this case bank balance //
 
