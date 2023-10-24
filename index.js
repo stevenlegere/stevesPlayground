@@ -913,14 +913,14 @@ function convertToInteger(str) {
     return parseInt(str, 2);
 }
 convertToInteger("10011");
-console.log(convertToInteger("10011"));
+console.log(convertToInteger("10011")); // 19
 
 // Ternary Operator
 // Example A will be written as a regular if...else statement
     // Example B will be written as a ternary operator
 // Example A
 function findGreater (a, b) {
-    if(a > b) {
+    if (a > b) {
         return "a is greater";
     } else {
         return "b is greater";
@@ -939,7 +939,7 @@ console.log(findGreaterTernary(5, 10));
 function checkEqual(a, b) {
     return a === b ? "Equal" : "Not Equal";
 }
-console.log(checkEqual(1, 2));
+console.log(checkEqual(1, 2)); // Not Equal
 
 // Multiple Ternary Operators
 function findGreaterOrEqual(a, b) {
@@ -947,7 +947,7 @@ function findGreaterOrEqual(a, b) {
     : (a > b) ? "a is greater"
     : "b is greater";
 };
-console.log(findGreaterOrEqual(5, 10));
+console.log(findGreaterOrEqual(5, 10)); // b is greater
 
 // Ternary Operator
 function checkSign(num) {
@@ -955,7 +955,7 @@ function checkSign(num) {
     : num < 0 ? "negative"
     : "zero";
 }
-console.log(checkSign(10));
+console.log(checkSign(-10)); // negative
 
 // Use recursion to create a countdown
 function countdown(n) {
@@ -968,5 +968,5 @@ function countdown(n) {
         return countArray;
     }
 }
-console.log(countdown(5));
+console.log(countdown(5)); // [5, 4, 3, 2, 1]
 
