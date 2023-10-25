@@ -205,7 +205,7 @@ console.log("You're looking for?");
 // Have count variable increment by 1 every second (1000 ms)
 // SetInterval
     - Call setInterval 
-    - gove setInterval tje incrementCount function as a callback - it can call the function whenever it needs to
+    - give setInterval the incrementCount function as a callback - it can call the function whenever it needs to
  - give setInterval the amount of time to wait in between calling the function
 //
 // This is now a counter 0 - infinate */
@@ -235,17 +235,20 @@ console.log(person.name);
 console.log(person['name']);
 console.log(person.age);
 
-// React
+// Array using concatenation and spread syntax or spread operator 
 const oldCount = [1, 2, 3, 4, 5];
+    console.log(oldCount); // [1, 2, 3, 4, 5]
 const uhOhCount = [oldCount, 6, 7, 8, 9];
+    console.log(uhOhCount); // [[1, 2, 3, 4, 5], 6, 7, 8, 9]
 const newCount = [...oldCount, 6, 7, 8, 9];
-console.log(newCount);
+    console.log(newCount); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 const moreNumbers = [1, 2, 3]
 const someMoreNumber = moreNumbers.map((number, i) => {
     console.log(i)
     return number / 2;
 });
+console.log(someMoreNumber); 
 
 // Basic function for repetition purpose
 function thisRectangle(width, height) {
