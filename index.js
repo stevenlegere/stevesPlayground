@@ -1012,3 +1012,19 @@ function editInPlace() {
 }
 editInPlace();
 console.log(reasignS); // [2, 5, 7]
+
+// Arrow function with parameters
+const doubler = (item) => item * 2; // If passing a single parameter, the parentheses are optional
+doubler(4); // 8
+console.log(doubler(4));
+
+// Arrow function with multiple parameters
+const multiplier = (item, multi) => item * multi;
+multiplier(4, 2); // 8
+console.log(multiplier(4, 2));
+
+// function that appends two parameters
+const myConcat = (arr1, arr2) => {
+    return arr1.concat(arr2);
+};
+console.log(myConcat([1, 2], [3, 4, 5])); // [1, 2, 3, 4, 5]
