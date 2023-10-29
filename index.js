@@ -970,3 +970,45 @@ function countdown(n) {
 }
 console.log(countdown(5)); // [5, 4, 3, 2, 1]
 
+// Use recursion to create a range of numbers
+function rangeOfNumbers(startNum, endNum) {
+    if (endNum - startNum === 0) {
+        return [startNum];
+    } else {
+        const numbers = rangeOfNumbers(startNum, endNum - 1);
+        numbers.push(endNum);
+        return numbers;
+    }
+}
+console.log(rangeOfNumbers(1, 5)); // [1, 2, 3, 4, 5]
+
+// Finding the remainder in JavaScript
+// The remainder operator % gives the remainder of the division of two numbers
+const remainder = 11 % 3;
+console.log(remainder); // 2
+
+// Compare scopes of the var and let keywords
+// let i = "function scope";
+function checkScope() {
+    let i = 'block scope';
+    return i;
+}
+console.log(checkScope()); // block scope
+
+// const declaration
+    // Objects are still mutable
+        // const variable only prevents reassignment of the varibale identofier
+const s = [5, 6, 7];
+// s = [1, 2, 3]; // throws error, trying to assign a const
+s[2] = 45;
+console.log(s); // [5, 6, 45] 
+
+// Reasign an array declared with const
+const reasignS = [5, 7, 2];
+function editInPlace() {
+    reasignS[0] = 2;
+    reasignS[1] = 5;
+    reasignS[2] = 7;
+}
+editInPlace();
+console.log(reasignS); // [2, 5, 7]
