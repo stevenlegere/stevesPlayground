@@ -1028,3 +1028,14 @@ const myConcat = (arr1, arr2) => {
     return arr1.concat(arr2);
 };
 console.log(myConcat([1, 2], [3, 4, 5])); // [1, 2, 3, 4, 5]
+
+// Default parameters for functions
+const greeting = (name = "Anonymous") => "Hello " + name;
+console.log(greeting("John")); // Hello John
+console.log(greeting()); // Hello Anonymous
+
+// Modify the function increment by adding default parameters so that it will add 1 to number if value is not specified.
+const increment = (number, value = 1) => number + value;
+console.log(increment(5, 2)); // 7
+console.log(increment(5)); // 6
+console.log(increment()); // NaN
