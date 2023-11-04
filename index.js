@@ -1075,3 +1075,33 @@ const { name, age } = user;
 return name + ' ' + age;
 }
 console.log(userDestructuring());
+
+
+// Use Destructuring Assignment to Assign Variables from Nested Objects
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80,
+};
+const { today, tomorrow } = HIGH_TEMPERATURES;
+console.log(today); // 77
+console.log(tomorrow); // 80
+
+// const HIGH_TEMPERATURES1 = {
+//     yesterday: 75,
+//     today: 77,
+//     tomorrow: 80,
+// };
+// const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES1;
+// console.log(highToday); // 77
+// console.log(highTomorrow); // 80
+
+// Use Destructuring Assignment to Assign Variables from Nested Objects
+const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
+};
+const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
+console.log(lowToday); // 64
+console.log(highToday); // 77
