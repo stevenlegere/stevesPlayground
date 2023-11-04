@@ -1039,3 +1039,39 @@ const increment = (number, value = 1) => number + value;
 console.log(increment(5, 2)); // 7
 console.log(increment(5)); // 6
 console.log(increment()); // NaN
+
+// Use the Rest Parameter with Function Parameters
+// With the rest parameter, you can create functions that take a variable number of arguments
+// These arguments are stored in an array that can be accessed later from inside the function
+function howMany(...args) {
+    return "You have passed " + args.length + " arguments.";
+}
+console.log(howMany(0, 1, 2)); // You have passed 3 arguments.
+console.log(howMany("string", null, [1, 2, 3], {})); // You have passed 4 arguments.
+
+//Modify the function sum using the rest parameter in such a way that the function sum is able to take any number of arguments and return their sum.
+const sumArgs = (...args) => {
+    return args.reduce((a, b) => a + b, 0);
+}
+console.log(sumArgs(1, 2, 3)); // 6
+
+// Use the Spread Operator to Evaluate Arrays In-Place
+var arr = [6, 89, 3, 45];
+var maximus = Math.max.apply(null, arr); // returns 89
+console.log(maximus);
+
+const arrSpread = [6, 89, 3, 45];
+const maximusSpread = Math.max(...arrSpread); // returns 89
+
+const arr1Spread = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2Spread;
+arr2Spread = [...arr1Spread];
+console.log(arr2Spread);
+
+// Use Destructuring Assignment to Assign Variables from Objects
+function userDestructuring() {
+const user = { name: 'John Doe', age: 34 };
+const { name, age } = user;
+return name + ' ' + age;
+}
+console.log(userDestructuring());
