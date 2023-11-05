@@ -1105,3 +1105,35 @@ const LOCAL_FORECAST = {
 const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
 console.log(lowToday); // 64
 console.log(highToday); // 77
+
+// Use Destructuring Assignment to Assign Variables from Arrays
+function assignVariablesFromArrays() {
+const [z, x] = [1, 2, 3, 4, 5, 6];
+return [z, x];
+}
+console.log(assignVariablesFromArrays()); // 1, 2
+
+// can also access the value at any index in an array with destructuring by using commas to reach the desired index:
+assignVariablesFromArraysComma = () => {
+    const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+    return [a, b, c];
+}
+console.log(assignVariablesFromArraysComma()); // 1, 2, 5
+
+// Use destructuring assignment to swap the values of a and b so that a receives the value stored in b, and b receives the value stored in a
+let aDestructuring = 8, bDestructuring = 6;
+(() => {
+    [aDestructuring, bDestructuring] = [bDestructuring, aDestructuring];
+})();
+console.log(aDestructuring); // 6
+console.log(bDestructuring); // 8
+
+// Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+removeFirstTwo = (list) => {
+    const [, , ...arr] = list;
+    return arr;
+}
+const sourceWithoutFirstTwo = removeFirstTwo(source);
+console.log(sourceWithoutFirstTwo); // [3, 4, 5, 6, 7, 8, 9, 10]
+
