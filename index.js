@@ -1152,3 +1152,28 @@ const half = ({ max, min }) => {
 
 console.log(half(stats)); // 28.015
 
+// Create Strings using Template Literals
+const person = {
+    name: "Zodiac Hasbro",
+    age: 56
+};
+const greeting2 = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+console.log(greeting2);
+
+// template literal syntax with backticks to create an array of list element (li) strings
+const result2 = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+    const failureItems = [];
+    for (let i = 0; i < arr.length; i++) {
+      failureItems.push(`<li class="text-warning">${arr[i]}</li>`); // Remove the extra square brackets
+    }
+    return failureItems;
+}
+const failureList = makeList(result2.failure);
+console.log(failureList);
+
