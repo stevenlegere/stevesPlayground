@@ -1269,3 +1269,80 @@ const novel = new Book('anonymous');
 console.log(novel.writer); // anonymous
 novel.writer = 'newAuthor';
 console.log(novel.writer); // newAuthor
+
+
+
+// Use class keyword to create a Thermostat class
+class Thermostat {
+    constructor(fahrenheit) {
+        this._fahrenheit = fahrenheit;
+    }
+    get temperature () {
+        return (5 / 9) * (this._fahrenheit - 32);
+    }
+    set temperature (celcius) {
+        this._fahrenheit = (celcius * 9.0) / 5 + 32;
+    }
+}
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+console.log(temp);
+
+// Create a javascript promise
+const myPromise = new Promise((resolve, reject) => {
+    // This promise will be forever stuck in the pending state
+});
+
+// Complete a Promise with resolve and reject
+const condition = true; // define condition
+const myPromise2 = new Promise((resolve, reject) => {
+    if(condition) {
+        resolve("Promise was fulfilled");
+    } else {
+        reject("Promise was rejected");
+    }
+});
+console.log(myPromise2);
+
+
+// Create a javascript promise
+const makeServerRequest = new Promise((resolve, reject) => {
+    // This promise will be forever stuck in the pending state
+})
+console.log(makeServerRequest);
+
+// Complete a Promise with resolve and reject
+const makeServerRequest2 = new Promise((resolve, reject) => {
+    let responseFromServer = true; // define condition
+
+    if(responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+console.log(makeServerRequest2);
+
+// Handle a Fulfilled Promise with then
+myPromise2.then(result => {
+})
+console.log(myPromise2);
+
+// Handle a Fulfilled Promise with then
+const makeServerRequest3 = new Promise((resolve, reject) => {
+    let responseFromServer = true;
+
+    if (responseFromServer) {
+        resolve("We got the data");
+    } else {
+        reject("Data not received");
+    }
+});
+console.log(makeServerRequest3);
+
+makeServerRequest3
+    .then(result => {
+        console.log(result); 
+    });
