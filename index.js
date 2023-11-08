@@ -1177,3 +1177,95 @@ function makeList(arr) {
 const failureList = makeList(result2.failure);
 console.log(failureList);
 
+// Write Concise Object Literal Declarations Using Object Property Shorthand
+    // Consider the following code:
+const getMousePosition = (x, y) => ({
+    x: x,
+    y: y
+});
+console.log(getMousePosition(1, 2)); // {x: 1, y: 2}
+
+// rewritten with ES6 syntax
+const getMousePosition2 = (x, y) => ({ x, y });
+console.log(getMousePosition2(1, 2)); // {x: 1, y: 2}
+
+
+const createPerson = (name2, age2, gender2) => {
+    return {
+        name: name2,
+        age: age2,
+        gender: gender2
+    };
+};
+// Pass argument values to the function as variables
+const name2 = "Peter Pan";
+const age2 = 98;
+const gender2 = "Non-binary";
+// Call the function with the arguments
+const person2 = createPerson(name2, age2, gender2);
+console.log(person2);
+
+// rewrite the function using the shorthand ES6 syntax
+const createPerson2 = (name2, age2, gender2) => ({ name2, age2, gender2 });
+// Pass argument values to the function as variables
+const name3 = "Peter Pan";
+const age3 = 98;
+const gender3 = "Non-binary";
+// Call the function with the arguments
+const person3 = createPerson2(name3, age3, gender3);
+console.log(person3);
+
+
+// In ES6 a class declaration has a constructor() method
+    // Explicit constructor
+class SpaceShuttle {
+    constructor(targetPlanet) {
+        this.targetPlanet = targetPlanet;
+    }
+    takeOff() {
+        console.log("To " + this.targetPlanet + "!");
+    }
+}
+const zeus = new SpaceShuttle("Jupiter");
+zeus.takeOff(); // To Jupiter !
+
+// Implicit constructor
+class Rocket {
+    launch() {
+        console.log("To the moon!");
+    }
+}
+const atlas = new Rocket();
+atlas.launch(); // To the moon!
+
+// Use the class keyword and write a constructor to create the Vegetable class.
+// The Vegetable class allows you to create a vegetable object with a property name that gets passed to the constructor
+class Vegetable {
+    constructor(name) {
+        this.name = name;
+    }
+}
+const carrot = new Vegetable("carrot");
+console.log(carrot.name); // 'carrot'
+
+
+// Use getters and setters to Control Access to an Object
+    // You can obtain values from an object and set the value of a property within an object
+    // These are classically called getters and setters
+class Book {
+    constructor(author) {
+        this._author = author;
+    }
+    // getter
+    get writer() {
+        return this._author;
+    }
+    // setter
+    set writer(updateAuthor) {
+        this._author = updateAuthor;
+    }
+}
+const novel = new Book('anonymous');
+console.log(novel.writer); // anonymous
+novel.writer = 'newAuthor';
+console.log(novel.writer); // newAuthor
