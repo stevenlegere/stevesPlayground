@@ -1367,3 +1367,16 @@ makeServerRequest4
         console.log(error); // Data not received
     });
 
+// Regular Expressions (RegEx)
+    // Regular expressions are used in programming languages to match parts of strings
+let testStr = "freeCodeCamp";
+let testRegex = /Code/;
+testRegex.test(testStr); // true
+console.log(testRegex.test(testStr));
+
+let myString = "Hello, World!";
+let myRegex = /Helloo/;
+let resultRegex = myRegex.test(myString); // false
+console.log(resultRegex);
+
+
