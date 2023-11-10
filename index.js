@@ -1379,4 +1379,19 @@ let myRegex = /Helloo/;
 let resultRegex = myRegex.test(myString); // false
 console.log(resultRegex);
 
+// Match Literal Strings
+let testLitStr = "Hello, my name is Kevin.";
+let testLitRegex = /Kevin/;
+console.log(testLitRegex.test(testLitStr)); //true
+
+let waldoIsHiding = "Somewhere Waldo is hiding in this text.";
+let waldoRegex = /Waldo/;
+let resultWaldo = waldoRegex.test(waldoIsHiding);
+console.log(resultWaldo); // true
+
+// Match a Literal String with Different Possibilities
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/;
+let resultPetRegex = petRegex.test(petString);
+console.log(resultPetRegex); //true
 
