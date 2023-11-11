@@ -1415,3 +1415,32 @@ let ourStr = "Regular expressions";
 let ourRegex = /expressions/;
 ourStr.match(ourRegex); // ["expressions"]
 console.log(ourStr.match(ourRegex)); // ["expressions"]
+
+// Find more than the first match with multiple flags /**/g
+let testRepeatStr = "Repeat, Repeat, Repeat";
+let ourRepeatRegex = /Repeat/g;
+testStr.match(ourRegex); // ["Repeat"]
+let resultRepeat = testRepeatStr.match(ourRepeatRegex);
+console.log(resultRepeat); // ["Repeat"]
+
+// More than one match using the g flag and ignore case using the i flag
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/gi;
+let resultTwinkle = twinkleStar.match(starRegex);
+console.log(resultTwinkle); // ["Twinkle", "twinkle"]
+
+// Match anything with wildcard period or dot (.)
+let humStr = "I'll hum a song";
+let hugStr = "Bear hug";
+let huRegex = /hu./;
+let resultHu = huRegex.test(humStr);
+let resultHu2 = huRegex.test(hugStr);
+console.log(resultHu); // true
+console.log(resultHu2); // true
+
+// Wildcard match(.)
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /un./;
+let resultUn = unRegex.test(exampleStr);
+console.log(resultUn); // true
+
