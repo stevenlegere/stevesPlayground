@@ -1379,7 +1379,7 @@ let myRegex = /Helloo/;
 let resultRegex = myRegex.test(myString); // false
 console.log(resultRegex);
 
-// Match Literal Strings
+// Match Literal Strings (seems same as regular expressions)
 let testLitStr = "Hello, my name is Kevin.";
 let testLitRegex = /Kevin/;
 console.log(testLitRegex.test(testLitStr)); //true
@@ -1395,3 +1395,23 @@ let petRegex = /dog|cat|bird|fish/;
 let resultPetRegex = petRegex.test(petString);
 console.log(resultPetRegex); //true
 
+// Ignore Case While Matching regEx
+let myStringCase = "freeCodeCamp";
+let fccRegex = /freecodecamp/i;
+let resultCase = fccRegex.test(myStringCase);
+console.log(resultCase); // true
+
+// Exact Mathces using .match()
+    // Note that the .match syntax is the "opposite" of the .test method you have been using thus far:
+let ourStrMatch = "Hello, World!";
+let ourRegexMatch = /Hello/;
+// ourStrMatch.match(ourRegexMatch); // ["Hello"]
+// console.log(ourStrMatch.match(ourRegexMatch)); // ["Hello"]
+let resultMatch = ourStrMatch.match(ourRegexMatch);
+console.log(resultMatch); // ["Hello"]
+
+// Exact Mathces using .match()
+let ourStr = "Regular expressions";
+let ourRegex = /expressions/;
+ourStr.match(ourRegex); // ["expressions"]
+console.log(ourStr.match(ourRegex)); // ["expressions"]
