@@ -1444,3 +1444,42 @@ let unRegex = /un./;
 let resultUn = unRegex.test(exampleStr);
 console.log(resultUn); // true
 
+// Match Single Character with Multiple Possibilities
+let bigStr = "big";
+let bagStr = "bag";
+let bugStr = "bug";
+let bogStr = "bog";
+let bgRegex = /b[aiu]g/;
+bigStr.match(bgRegex); // ["big"]
+bagStr.match(bgRegex); // ["bag"]
+bugStr.match(bgRegex); // ["bug"]
+bogStr.match(bgRegex); // null
+let resultBg = bigStr.match(bgRegex);
+console.log(resultBg); // ["big"]
+console.log(bagStr.match(bgRegex)); // ["bag"]
+
+// Use a character class with vowels (a, e, i, o, u) in your regex vowelRegex to find all the vowels in the string quoteSample
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; // Using global and ignore case flags
+let resultVowel = quoteSample.match(vowelRegex);
+console.log(resultVowel); // ["e", "a", "e", "o", "u", "i", "e", "a", "o", "e", "o", "e", "I", "a", "e", "o", "o", "e", "i", "o", "e", "i"]
+
+// Match Letters of the Alphabet
+  // [-] hyphen inside a charecter set
+let catStr = "cat";
+let batStr = "bat";
+let matStr = "mat";
+let bgRegexAlph = /[a-e]at/;
+catStr.match(bgRegexAlph);
+batStr.match(bgRegexAlph);
+matStr.match(bgRegexAlph);
+console.log(catStr.match(bgRegexAlph)); // ["cat"]
+console.log(batStr.match(bgRegexAlph)); // ["bat"]
+console.log(matStr.match(bgRegexAlph)); // null
+
+// Match all the letters in the string quoteSampleAlph
+let quoteSampleAlph = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi;
+let resultAlph = quoteSampleAlph.match(alphabetRegex);
+console.log(resultAlph); // ["T", "h", "e", "q", "u", "i", "c", "k", "b", "r", "o", "w", "n", "f", "o", "x", "j", "u", "m", "p", "s", "o", "v", "e", "r", "t", "h", "e", "l", "a", "z", "y", "d", "o", "g"]
+
