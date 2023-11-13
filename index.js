@@ -1496,3 +1496,33 @@ let quoteSampleRegex = "Bluewberyy 3.141592653s are delicious.";
 let myRegexLettersNumbers = /[h-s2-6]/ig;
 let resultLettersNumbers = quoteSampleRegex.match(myRegexLettersNumbers);
 console.log(resultLettersNumbers); // ["l", "r", "3", "4", "5", "2", "6", "5", "3", "s", "r", "l", "i", "i", "i", "i", "s"]
+
+
+// Match Single Characters Not Specified
+  // Negated character sets /[^]
+let quoteSampleNeg = "3 blind mice.";
+let myRegexNeg = /[^aeiou0-9]/gi;
+let resultNeg = quoteSampleNeg.match(myRegexNeg);
+console.log(resultNeg); // [" ", "b", "l", "n", "d", " ", "m", "c", "."]
+
+// Match Characters that Occur One or More Times
+    // + plus sign
+let difficultSpelling = "Mississippi";
+let myRegexDiff = /s+/g;
+let resultDiff = difficultSpelling.match(myRegexDiff);
+console.log(resultDiff); // ["ss", "ss"]
+
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+soccerWord.match(goRegex); // ["goooooooo"]
+gPhrase.match(goRegex); // ["g"]
+oPhrase.match(goRegex); // null
+console.log(soccerWord.match(goRegex)); // ["goooooooo"]
+
+// Match Characters that Occur Zero or More Times
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /Aa*/;
+let resultChewie = chewieQuote.match(chewieRegex);
+console.log(resultChewie); // ["Aaaaaaaaaaaaaaaa"]
