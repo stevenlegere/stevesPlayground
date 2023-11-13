@@ -1483,3 +1483,16 @@ let alphabetRegex = /[a-z]/gi;
 let resultAlph = quoteSampleAlph.match(alphabetRegex);
 console.log(resultAlph); // ["T", "h", "e", "q", "u", "i", "c", "k", "b", "r", "o", "w", "n", "f", "o", "x", "j", "u", "m", "p", "s", "o", "v", "e", "r", "t", "h", "e", "l", "a", "z", "y", "d", "o", "g"]
 
+// Match Numbers and Letters of the Alphabet
+   // /[0-9a-z]/gi
+let jennyStr = "Jenny8675309";
+let myRegexJenny = /[a-z0-9]/ig;
+jennyStr.match(myRegexJenny);
+let resultJenny = jennyStr.match(myRegexJenny);
+console.log(resultJenny); // ["J", "e", "n", "n", "y", "8", "6", "7", "5", "3", "0", "9"]
+
+// Create a single regex that matches a range of letters between h and s, and a range of numbers between 2 and 6
+let quoteSampleRegex = "Bluewberyy 3.141592653s are delicious.";
+let myRegexLettersNumbers = /[h-s2-6]/ig;
+let resultLettersNumbers = quoteSampleRegex.match(myRegexLettersNumbers);
+console.log(resultLettersNumbers); // ["l", "r", "3", "4", "5", "2", "6", "5", "3", "s", "r", "l", "i", "i", "i", "i", "s"]
