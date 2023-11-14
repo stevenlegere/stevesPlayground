@@ -1526,3 +1526,30 @@ let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
 let chewieRegex = /Aa*/;
 let resultChewie = chewieQuote.match(chewieRegex);
 console.log(resultChewie); // ["Aaaaaaaaaaaaaaaa"]
+
+// Find Characters with Lazy Matching
+  // greedy match finds the longest possible part of a string
+  // lazy match finds the smallest possible part of the string that satisfies the regex pattern
+    // greedy match /t[a-z]*i/ will match the entire string "titanic"
+    // lazy match /t[a-z]*?i/ will match only the letter "t"
+let greedyStr = "titanic";
+let greedyRegex = /t[a-z]*i/;
+let resultGreedy = greedyStr.match(greedyRegex);
+console.log(resultGreedy); // ["titani"]
+
+let lazyStr = "titanic";
+let lazyRegex = /t[a-z]*?i/;
+let resultLazy = lazyStr.match(lazyRegex);
+console.log(resultLazy); // ["ti"]
+
+// return <h1> and not the text <h1>Winter is coming</h1>
+let textH1 = "<h1>Winter is coming</h1>";
+let myRegexH1 = /<.*?>/;
+let resultH1 = textH1.match(myRegexH1);
+console.log(resultH1); // ["<h1>"]
+
+// Find one or more criminals in a hunt
+let crowd = "P1P2P3P4P5P6CCCP7P8P9";
+let reCriminals = /C+/;
+let matchedCriminals = crowd.match(reCriminals);
+console.log(matchedCriminals); // ["CCC"]
