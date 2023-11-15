@@ -1562,3 +1562,52 @@ let notFirst = "You can't find Ricky now";
 firstRegex.test(notFirst); // false
 console.log(firstRegex.test(firstString)); // true
 console.log(firstRegex.test(notFirst)); // false
+
+// Match Beginning String Patterns /^/
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/;
+let resultCal = calRegex.test(rickyAndCal);
+console.log(resultCal); // true
+
+// Match Ending String Patterns /$/
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+storyRegex.test(theEnding); // true
+let noEnding = "Sometimes a story will have to end";
+storyRegex.test(noEnding); // false
+console.log(storyRegex.test(theEnding)); // true
+console.log(storyRegex.test(noEnding)); // false
+
+// Match Ending String Patterns
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/;
+let resultLast = lastRegex.test(caboose);
+console.log(resultLast); // true
+
+// Match All Letters and Numbers
+  // \w is equal to [A-Za-z0-9_]
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+let numbersAll = "42";
+let varName = "important_var";
+longHand.test(numbersAll); // true
+shortHand.test(numbersAll); // true
+longHand.test(varName); // true
+shortHand.test(varName); // true
+let resultLongHand = longHand.test(numbersAll);
+let resultShortHand = shortHand.test(numbersAll);
+let resultLongHand2 = longHand.test(varName);
+let resultShortHand2 = shortHand.test(varName);
+console.log(resultLongHand); // true
+console.log(resultShortHand); // true
+console.log(resultLongHand2); // true
+console.log(resultShortHand2); // true
+
+// Match All Letters and Numbers
+  // \w is equal to [A-Za-z0-9_]
+    //  shorthand character classes
+let quoteSampleAll = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g;
+let resultAll = quoteSampleAll.match(alphabetRegexV2).length;
+console.log(resultAll); // 31
+
