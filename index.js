@@ -1553,3 +1553,12 @@ let crowd = "P1P2P3P4P5P6CCCP7P8P9";
 let reCriminals = /C+/;
 let matchedCriminals = crowd.match(reCriminals);
 console.log(matchedCriminals); // ["CCC"]
+
+// Match Beginning String Patterns
+let firstString = "Ricky is first and can be found.";
+let firstRegex = /^Ricky/;
+firstRegex.test(firstString); // true
+let notFirst = "You can't find Ricky now";
+firstRegex.test(notFirst); // false
+console.log(firstRegex.test(firstString)); // true
+console.log(firstRegex.test(notFirst)); // false
