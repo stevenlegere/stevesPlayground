@@ -1611,3 +1611,35 @@ let alphabetRegexV2 = /\w/g;
 let resultAll = quoteSampleAll.match(alphabetRegexV2).length;
 console.log(resultAll); // 31
 
+// Match Everything But Letters and Numbers
+    // \W is equal to [^A-Za-z0-9_]
+let shortHandNon = /\W/;
+let numbersNon = "42%";
+let sentenceNon = "Coding!";
+numbersNon.match(shortHandNon); // ["%"]
+sentenceNon.match(shortHandNon); // ["!"]
+let resultNon = numbersNon.match(shortHandNon);
+let resultNon2 = sentenceNon.match(shortHandNon);
+console.log(resultNon); // ["%"]
+console.log(resultNon2); // ["!"]
+
+// Match Everything But Letters and Numbers
+    // \W is equal to [^A-Za-z0-9_]
+let quoteSampeNon = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g;
+let resultNonAlphabet = quoteSampleAll.match(nonAlphabetRegex);
+console.log(resultNonAlphabet); // [" ", " ", " ", " ", " ", " ", "."]
+
+// Match all numbers
+    // \d is equal to [0-9]
+let movieNameNum = "2001: A Space Odyssey";
+let numRegex = /\d/g;
+let resultNum = movieNameNum.match(numRegex).length;
+console.log(resultNum); // 4
+
+// Match all non-numbers
+    // \D is equal to [^0-9]
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g;
+let resultNoNum = movieName.match(noNumRegex).length;
+console.log(resultNoNum); // 17
