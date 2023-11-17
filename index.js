@@ -1643,3 +1643,57 @@ let movieName = "2001: A Space Odyssey";
 let noNumRegex = /\D/g;
 let resultNoNum = movieName.match(noNumRegex).length;
 console.log(resultNoNum); // 17
+
+// Restrict Possible Usernames
+    // Usernames can only use alpha-numeric characters
+    // The only numbers in the username have to be at the end
+    // There can be zero or more of them at the end
+    // Username letters can be lowercase and uppercase
+    // Usernames have to be at least two characters long
+    // A two-character username can only use alphabet letters as characters
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]([0-9][0-9]+|[a-z]+\d*)$/i;
+let resultUser = userCheck.test(username);
+console.log(resultUser); // true
+
+// Match Whitespace
+    // \s is equal to [\r\t\f\n\v]
+let whiteSpace = "Whitespace. Whitespace everywhere!";
+let spaceRegex = /\s/g;
+whiteSpace.match(spaceRegex); // [" ", " "]
+let resultWhiteSpace = whiteSpace.match(spaceRegex);
+console.log(resultWhiteSpace); // [" ", " "]
+
+// Match Non-Whitespace Characters
+    // \S is equal to [^\r\t\f\n\v]
+let notWhiteSpace = "Whitespace. Whitespace everywhere!";
+let nonSpaceRegex = /\S/g;
+whiteSpace.match(nonSpaceRegex).length; // 32
+console.log(whiteSpace.match(nonSpaceRegex).length); // 32
+
+// Match Non-Whitespace Characters
+let sampleNon = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g;
+let resultNonWhiteSpace = sampleNon.match(countNonWhiteSpace);
+console.log(resultNonWhiteSpace); // ["W", "h", "i", "t", "e", "s", "p", "a", "c", "e", "i", "s", "i", "m", "p", "o", "r", "t", "a", "n", "t", "i", "n", "s", "e", "p", "a", "r", "a", "t", "i", "n", "g", "w", "o", "r", "d", "s"]
+
+// Specify Upper and Lower Number of Matches
+    // {lower, upper}
+    // {2, 6} will match between 2 and 6
+let A4 = "aaaah";
+let A2 = "aah";
+let multipleA = /a{3,5}h/;
+multipleA.test(A4); // true
+multipleA.test(A2); // false
+let resultMultipleA = multipleA.test(A4);
+let resultMultipleA2 = multipleA.test(A2);
+console.log(resultMultipleA); // true
+console.log(resultMultipleA2); // false
+
+// Specify Only the Lower Number of Matches
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/;
+let resultOh = ohRegex.test(ohStr);
+console.log(resultOh); // true
+
+
