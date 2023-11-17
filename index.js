@@ -1696,4 +1696,22 @@ let ohRegex = /Oh{3,6}\sno/;
 let resultOh = ohRegex.test(ohStr);
 console.log(resultOh); // true
 
+// Specify Exact Number of Matches
+  // For example, to match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/
+let A4Exact = "haaaah";
+let A2Exact = "haah";
+let A100Exact = "h" + "a".repeat(100) + "h";
+let multipleAExact = /ha{3,}h/;
+multipleAExact.test(A4Exact);
+multipleAExact.test(A2Exact);
+multipleAExact.test(A100Exact);
+console.log(multipleAExact.test(A4Exact)); // true
+console.log(multipleAExact.test(A2Exact)); // false
+console.log(multipleAExact.test(A100Exact)); // true
+
+// Specify Exact Number of Matches
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/;
+let resultHa = haRegex.test(haStr);
+console.log(resultHa); // true
 
