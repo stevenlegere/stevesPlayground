@@ -1715,3 +1715,29 @@ let haRegex = /Haz{4,}ah/;
 let resultHa = haRegex.test(haStr);
 console.log(resultHa); // true
 
+// Specify Exact Number of Matches
+let timStr = "Timmmmber";
+let timeRegex = /Tim{4}ber/;
+let resultTime = timeRegex.test(timStr);
+console.log(resultTime); // true
+
+
+// Check for all or none
+    // ? question mark
+let american = "color";
+let british = "colour";
+let rainbowRegex = /colou?r/;
+rainbowRegex.test(american); // true
+rainbowRegex.test(british); // true
+let resultRainbow = rainbowRegex.test(american);
+let resultRainbow2 = rainbowRegex.test(british);
+console.log(resultRainbow); // true
+console.log(resultRainbow2); // true
+
+// Specify Exact Number of Matches
+let favWord = "favourite";
+let favRegex = /favou?rite/;
+let resultWord = favRegex.test(favWord);
+console.log(resultWord); // true
+
+
