@@ -1741,3 +1741,48 @@ let resultWord = favRegex.test(favWord);
 console.log(resultWord); // true
 
 
+// Positive and Negative Lookahead
+    // (?=...)
+    // (?!...)
+let quit = "qu";
+let noquit = "qt";
+let quRegex = /q(?=u)/; // matches q only if it is followed by a u
+let qRegex = /q(?!u)/; // matches q only if it is not followed by a u
+quit.match(quRegex); // ["q"]
+noquit.match(qRegex); // ["q"]
+let resultQu = quit.match(quRegex);
+let resultNoQu = noquit.match(qRegex);
+console.log(resultQu); // ["q"]
+console.log(resultNoQu); // ["q"]
+
+// Positive and Negative Lookahead
+  // Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/; // matches passwords that are greater than 3 characters long, do not begin with numbers, and have two consecutive digits
+checkPass.test(password); // true
+let resultPassword = checkPass.test(password);
+console.log(resultPassword); // true
+
+// Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, and have two consecutive digits
+let sampleWord = "astronaut";
+// Your regex should not match the string 12345
+let pwRegex = /(?=\w{6,})(?=\D*\d{2})/;
+let resultSampleWord = pwRegex.test(sampleWord);
+console.log(resultSampleWord); // false
+
+// Check For Mixed Grouping of Characters
+    // () parenthesis
+    // To find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+let testStrGroup = "Pumpkin";
+let testRegexMixed = /P(engu|umpk)in/;
+testRegexMixed.test(testStrGroup); // true
+let resultMixed = testRegexMixed.test(testStrGroup);
+console.log(resultMixed); // true
+
+// Check For Mixed Grouping of Characters
+let myStringMixed = "Eleanor Roosevelt";
+// Your regex myRegex should return false for the string FranklinRoosevelt
+// Failed:Your regex myRegex should return false for the string EleanorRoosevelt
+let myRegexMixed = /(Franklin|Eleanor).*Roosevelt/;
+let resultMixed2 = myRegexMixed.test(myStringMixed);
+console.log(resultMixed2); // true
