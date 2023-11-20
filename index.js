@@ -1056,12 +1056,15 @@ const sumArgs = (...args) => {
 console.log(sumArgs(1, 2, 3)); // 6
 
 // Use the Spread Operator to Evaluate Arrays In-Place
+  // apply method - This examnple uses the Math.max() function to find the maximum number in an array
 var arr = [6, 89, 3, 45];
-var maximus = Math.max.apply(null, arr); // returns 89
+var maximus = Math.max.apply(null, arr); // returns 89 | Not using the spread operator
 console.log(maximus);
 
+// Using the spread operator
 const arrSpread = [6, 89, 3, 45];
 const maximusSpread = Math.max(...arrSpread); // returns 89
+console.log(maximusSpread);
 
 const arr1Spread = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2Spread;
@@ -1403,10 +1406,10 @@ console.log(resultCase); // true
 
 // Exact Mathces using .match()
     // Note that the .match syntax is the "opposite" of the .test method you have been using thus far:
-let ourStrMatch = "Hello, World!";
+        // .match will return the acual value
+        // .test will return a boolean
+    let ourStrMatch = "Hello, World!";
 let ourRegexMatch = /Hello/;
-// ourStrMatch.match(ourRegexMatch); // ["Hello"]
-// console.log(ourStrMatch.match(ourRegexMatch)); // ["Hello"]
 let resultMatch = ourStrMatch.match(ourRegexMatch);
 console.log(resultMatch); // ["Hello"]
 
@@ -1783,6 +1786,7 @@ console.log(resultMixed); // true
 let myStringMixed = "Eleanor Roosevelt";
 // Your regex myRegex should return false for the string FranklinRoosevelt
 // Failed:Your regex myRegex should return false for the string EleanorRoosevelt
-let myRegexMixed = /(Franklin|Eleanor).*Roosevelt/;
+let myRegexMixed = /(Franklin\s|Eleanor\s).*Roosevelt/;
 let resultMixed2 = myRegexMixed.test(myStringMixed);
 console.log(resultMixed2); // true
+
