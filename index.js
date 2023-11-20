@@ -1069,18 +1069,19 @@ console.log(maximusSpread);
 const arr1Spread = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
 let arr2Spread;
 arr2Spread = [...arr1Spread];
-console.log(arr2Spread);
+console.log(arr2Spread[3]); // APR
 
 // Use Destructuring Assignment to Assign Variables from Objects
+  // In this example, destructuring is used to extract the values of today and tomorrow from the HIGH_TEMPERATURES object. The resulting values are then logged to the console
 function userDestructuring() {
 const user = { name: 'John Doe', age: 34 };
 const { name, age } = user;
 return name + ' ' + age;
 }
-console.log(userDestructuring());
-
+console.log(userDestructuring()); // John Doe 34
 
 // Use Destructuring Assignment to Assign Variables from Nested Objects
+   // This example is similar to the first one but demonstrates how you can use a different variable name during destructuring. Instead of using today and tomorrow, it uses highToday2 and highTomorrow2
 const HIGH_TEMPERATURES = {
     yesterday: 75,
     today: 77,
@@ -1090,16 +1091,18 @@ const { today, tomorrow } = HIGH_TEMPERATURES;
 console.log(today); // 77
 console.log(tomorrow); // 80
 
-// const HIGH_TEMPERATURES1 = {
-//     yesterday: 75,
-//     today: 77,
-//     tomorrow: 80,
-// };
-// const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES1;
-// console.log(highToday); // 77
-// console.log(highTomorrow); // 80
+// This example is similar to the first one but demonstrates how you can use a different variable name during destructuring. Instead of using today and tomorrow, it uses highToday2 and highTomorrow2
+const HIGH_TEMPERATURES1 = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80,
+};
+const { today: highToday2, tomorrow: highTomorrow2 } = HIGH_TEMPERATURES1;
+console.log(highToday2); // 77
+console.log(highTomorrow2); // 80
 
 // Use Destructuring Assignment to Assign Variables from Nested Objects
+  // In this example, the LOCAL_FORECAST object has nested objects for each day. Destructuring is used to extract the low and high temperatures for today from the nested structure
 const LOCAL_FORECAST = {
     yesterday: { low: 61, high: 75 },
     today: { low: 64, high: 77 },
@@ -1178,7 +1181,7 @@ function makeList(arr) {
     return failureItems;
 }
 const failureList = makeList(result2.failure);
-console.log(failureList);
+console.log(failureList); // [ '<li class="text-warning">no-var</li>', '<li class="text-warning">var-on-top</li>', '<li class="text-warning">linebreak</li>' ]
 
 // Write Concise Object Literal Declarations Using Object Property Shorthand
     // Consider the following code:
@@ -1789,4 +1792,7 @@ let myStringMixed = "Eleanor Roosevelt";
 let myRegexMixed = /(Franklin\s|Eleanor\s).*Roosevelt/;
 let resultMixed2 = myRegexMixed.test(myStringMixed);
 console.log(resultMixed2); // true
+
+
+
 
