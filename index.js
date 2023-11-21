@@ -1793,6 +1793,24 @@ let myRegexMixed = /(Franklin\s|Eleanor\s).*Roosevelt/;
 let resultMixed2 = myRegexMixed.test(myStringMixed);
 console.log(resultMixed2); // true
 
+function fizzBuzz () {
+    // create a function that counts from 1 - 100
+    // multiples of 3 print fizz
+    // multiples of 5 print buzz
+    // multiples of both 3 and 5 print fizzBuzz
+    for (let i = 1; i <= 15; i++) {
+        // if i is a multiple if 
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        } else if  (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz");
+        }
+    }
+    }
+fizzBuzz();
+
 
 
 
