@@ -1811,6 +1811,67 @@ function fizzBuzz () {
     }
 fizzBuzz();
 
+function myFunc() {
+    console.log("Hello Then");
+}
+myFunc();
 
+function fizzBuzz2 () {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i & 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz");
+        }
+    }
+}
+fizzBuzz2();
 
+const fizzBuzz3 = () => { 
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        }
+    }
+}
+fizzBuzz3()
 
+function fizzBuzz4() {
+    // create a for loop that holds a variable for the value of i = 1
+      // if i is less than 15 then iterate to the next number
+    for (let i = 1; i <= 15; i++) {
+        // check for multiples of each number from 1 - 15
+          // if number if multiple of 3 then print fizz to the console
+            // if number if multiple of 5 then print buzz to the console
+              // if number if multiple of 3 and 5 then print fizzBuzz to the console
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        }
+    }
+}
+fizzBuzz4()
+
+function fizzBuzz5() {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzzz");
+        }
+        else if (i % 3 === 0) {
+            console.log("Fizzz");
+        }
+        else if (i % 5 === 0) {
+            console.log("Buzz");
+        }
+    }
+}
+fizzBuzz5()
