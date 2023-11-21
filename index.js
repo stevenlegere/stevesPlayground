@@ -1950,3 +1950,31 @@ const isPalindrome = (str) => {
     }
 }
 console.log(isPalindrome("racecar")); // true
+
+// Reverse a string without using library functions
+const reverseString = (str) => {
+    // create a for loop that iterates through the string
+    for (let i = 0; i < str.length; i++) {
+        // return the string reversed
+        return str.split("").reverse().join("");
+    }
+}
+console.log(reverseString("hello")); // olleh
+
+// Implement a function to check for duplicates in an array
+const hasDuplicates = (arr) => {
+    // create a for loop that iterates through the array
+    for (let i = 0; i < arr.length; i++) {
+        // create a second for loop that iterates through the array
+        for (let j = 0; j < arr.length; j++) {
+            // if the two numbers are equal then return true
+            if (arr[i] === arr[j] && i !== j) {
+                return true;
+            }
+        }
+    }
+    // else return false
+    return false;
+}
+console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9])); // false
+console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9, 1])); // true
