@@ -504,14 +504,14 @@ hello(); // invoke the function
 //       this.numberOfLegs = numberOfLegs;
 //       }
 //     }
-    
+
 //     // Custom sorting function
 //     function sortAnimal(animals) {
 //       // Check id the list is empty
 //       if(animals.length === 0) {
 //         return [];
 //       }
-      
+
 //       // Custom sorting function
 //       function customSortAnimal(a, b) {
 //        // Compare the number of legs
@@ -522,13 +522,13 @@ hello(); // invoke the function
 //         // If the number of legs is the same, compare the name
 //         return a.name.localeCompare(b.name);
 //       }
-      
+
 //       // Sort the list using the custom sorting function
 //       const sortedAnimal = animals.slice(); // Shallow copt if the original list
 //       sortedAnimal.sort(customSortAnimal);
-      
+
 //       return sortedAnimal
-      
+
 //       }
 
 
@@ -540,32 +540,32 @@ class Animal {
     }
 }
 
-const compareAnimals = (a, b) => 
+const compareAnimals = (a, b) =>
     a.numberOfLegs - b.numberOfLegs || a.name.localeCompare(b.name);
 
-    const sortAnimal = animals =>
+const sortAnimal = animals =>
     animals ? animals.slice().sort(compareAnimals) : null;
 
-      const animals = [
-        new Animal("Cat", 4),
-        new Animal("Snake", 0),
-        new Animal("Dog", 4),
-        new Animal("Pig", 4),
-        new Animal("Human", 2),
-        new Animal("Bird", 2)
-    ];
-    
-    const sortedAnimals = sortAnimal(animals);
-    console.log(sortedAnimals);
+const animals = [
+    new Animal("Cat", 4),
+    new Animal("Snake", 0),
+    new Animal("Dog", 4),
+    new Animal("Pig", 4),
+    new Animal("Human", 2),
+    new Animal("Bird", 2)
+];
+
+const sortedAnimals = sortAnimal(animals);
+console.log(sortedAnimals);
 
 
 
 const languages = ["javaScript", "SQL", "cat purrs", "c#", "Go"];
 
 const accurateLanguages = [
-	...languages.slice(0, 2),
+    ...languages.slice(0, 2),
     "Python",
-	...languages.slice(3)
+    ...languages.slice(3)
 ];
 console.log(accurateLanguages);
 
@@ -590,11 +590,11 @@ let isMultipleOfSeven = sevenTimesTable.every(sevenTimesTable => sevenTimesTable
 console.log(isMultipleOfSeven);
 // true
 
- // Using the .every() method check if every number in the seventySevenTimesTable is a multiple of 77
- const seventySevenTimesTable = [77, 154, 231, 308, 385, 461, 539, 616, 693, 770];
- let isMultipleOfSeventySeven = seventySevenTimesTable.every(seventySevenTimesTable => seventySevenTimesTable % 7 === 0);
- console.log(isMultipleOfSeventySeven);
- // false 
+// Using the .every() method check if every number in the seventySevenTimesTable is a multiple of 77
+const seventySevenTimesTable = [77, 154, 231, 308, 385, 461, 539, 616, 693, 770];
+let isMultipleOfSeventySeven = seventySevenTimesTable.every(seventySevenTimesTable => seventySevenTimesTable % 7 === 0);
+console.log(isMultipleOfSeventySeven);
+// false 
 // Find the false value in the seventySevenTimesTable array
 // Use the .findIndex() mehod to identify the fasle value
 const falseValue = seventySevenTimesTable.findIndex(seventySevenTimesTable => seventySevenTimesTable % 7 !== 0);
@@ -615,9 +615,9 @@ console.log(biggest);
 
 let isRaining = "true";
 if (isRaining === "true") {
-	console.log("Pack your umbrella");
+    console.log("Pack your umbrella");
 } else {
-	console.log("Wear your favourite T");
+    console.log("Wear your favourite T");
 };
 
 const numberValue = 42;
@@ -627,15 +627,15 @@ if (numberValue == stringValue) {
 };
 
 const greetThis = () => {
-	return "Hello Steve";
+    return "Hello Steve";
 }
 console.log(greetThis());
- 
+
 
 const cars = ["BMW", "Volvo", "Saab", "Ford", "Skoda"];
 let text = "";
 for (let i = 0; i < cars.length; i++) {
-	text += cars[i] + " ";
+    text += cars[i] + " ";
 };
 console.log(cars[1]);
 
@@ -728,53 +728,53 @@ console.log(removeANumber);
 // Setup
 const recordCollection = {
     2548: {
-      albumTitle: 'Slippery When Wet',
-      artist: 'Bon Jovi',
-      tracks: ['Let It Rock', 'You Give Love a Bad Name']
+        albumTitle: 'Slippery When Wet',
+        artist: 'Bon Jovi',
+        tracks: ['Let It Rock', 'You Give Love a Bad Name']
     },
     2468: {
-      albumTitle: '1999',
-      artist: 'Prince',
-      tracks: ['1999', 'Little Red Corvette']
+        albumTitle: '1999',
+        artist: 'Prince',
+        tracks: ['1999', 'Little Red Corvette']
     },
     1245: {
-      artist: 'Robert Palmer',
-      tracks: []
+        artist: 'Robert Palmer',
+        tracks: []
     },
     5439: {
-      albumTitle: 'ABBA Gold'
+        albumTitle: 'ABBA Gold'
     }
-  };
-  
-  // free code camp challenge to update the record collection
-  function updateRecords(records, id, prop, value) {
+};
+
+// free code camp challenge to update the record collection
+function updateRecords(records, id, prop, value) {
     // function must always return the entire records object
     // if value is an empty string, delete the given prop property from the album
     // If the prop isn't tracks and value isn't an empty string, assign the value to that album's prop
     // if prop is tracks and value isn't an empty string, you need to update the album's tracks array. First the album does not have a tracks property, assign it an empty array. Then add the value as the last item in the album's tracks array.
     if (prop !== "tracks" && value !== "") {
         records[id][prop] = value;
-    } 
+    }
     else if (prop === "tracks" && !records[id].hasOwnProperty("tracks")) {
         records[id][prop] = [value];
-    } 
+    }
     else if (prop === "tracks" && value !== "") {
         records[id][prop].push(value);
-    } 
+    }
     else if (value === "") {
         delete records[id][prop];
     }
     return records;
-  }
+}
 
-  updateRecords(recordCollection, 5439, 'artist', 'ABBA');
-  console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
-  
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+
 //   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
 
 
 // Multiplication with nested arrays
-  // Use a for loop to multiply each number in the sub-arrays
+// Use a for loop to multiply each number in the sub-arrays
 function multiplyAll(arr) {
     let product = 1;
 
@@ -802,7 +802,7 @@ console.log(myDoWhileArray);
 console.log(iDoWhile);
 
 // Recursive function
-    // a function that calls itself during its execution
+// a function that calls itself during its execution
 function sum(arr, n) {
     if (n === 0) {
         return 0;
@@ -849,16 +849,16 @@ function lookUpProfile(name, prop) {
     // Loop through the contacts array
     for (let i = 0; i < contacts.length; i++) {
         // Check if the contacts first name matches the given name
-    if (contacts[i].firstName === name) {
-        // Check is the property prop exists in the contact
-        if (contacts[i].hasOwnProperty(prop)) {
-            // Return the value property
-            return contacts[i][prop];
-        } else {
-            // If the property does not exist, return 'No such property'
-            return "No such property";
+        if (contacts[i].firstName === name) {
+            // Check is the property prop exists in the contact
+            if (contacts[i].hasOwnProperty(prop)) {
+                // Return the value property
+                return contacts[i][prop];
+            } else {
+                // If the property does not exist, return 'No such property'
+                return "No such property";
+            }
         }
-    }
     }
     // If no matching contact is founf, return "No such contact"
     return "No such contact";
@@ -917,9 +917,9 @@ console.log(convertToInteger("10011")); // 19
 
 // Ternary Operator
 // Example A will be written as a regular if...else statement
-    // Example B will be written as a ternary operator
+// Example B will be written as a ternary operator
 // Example A
-function findGreater (a, b) {
+function findGreater(a, b) {
     if (a > b) {
         return "a is greater";
     } else {
@@ -929,7 +929,7 @@ function findGreater (a, b) {
 console.log(findGreater(5, 10));
 
 // Example B ternary operator
-    // Ternary operator if a conditional operator that assigns a value to a variable based on some condition
+// Ternary operator if a conditional operator that assigns a value to a variable based on some condition
 function findGreaterTernary(a, b) {
     return a > b ? "a is greater" : "b is greater or equal";
 }
@@ -944,16 +944,16 @@ console.log(checkEqual(1, 2)); // Not Equal
 // Multiple Ternary Operators
 function findGreaterOrEqual(a, b) {
     return (a === b) ? "a and b are equal"
-    : (a > b) ? "a is greater"
-    : "b is greater";
+        : (a > b) ? "a is greater"
+            : "b is greater";
 };
 console.log(findGreaterOrEqual(5, 10)); // b is greater
 
 // Ternary Operator
 function checkSign(num) {
     return num > 0 ? " positive"
-    : num < 0 ? "negative"
-    : "zero";
+        : num < 0 ? "negative"
+            : "zero";
 }
 console.log(checkSign(-10)); // negative
 
@@ -996,8 +996,8 @@ function checkScope() {
 console.log(checkScope()); // block scope
 
 // const declaration
-    // Objects are still mutable
-        // const variable only prevents reassignment of the varibale identofier
+// Objects are still mutable
+// const variable only prevents reassignment of the varibale identofier
 const s = [5, 6, 7];
 // s = [1, 2, 3]; // throws error, trying to assign a const
 s[2] = 45;
@@ -1056,7 +1056,7 @@ const sumArgs = (...args) => {
 console.log(sumArgs(1, 2, 3)); // 6
 
 // Use the Spread Operator to Evaluate Arrays In-Place
-  // apply method - This examnple uses the Math.max() function to find the maximum number in an array
+// apply method - This examnple uses the Math.max() function to find the maximum number in an array
 var arr = [6, 89, 3, 45];
 var maximus = Math.max.apply(null, arr); // returns 89 | Not using the spread operator
 console.log(maximus);
@@ -1072,16 +1072,16 @@ arr2Spread = [...arr1Spread];
 console.log(arr2Spread[3]); // APR
 
 // Use Destructuring Assignment to Assign Variables from Objects
-  // In this example, destructuring is used to extract the values of today and tomorrow from the HIGH_TEMPERATURES object. The resulting values are then logged to the console
+// In this example, destructuring is used to extract the values of today and tomorrow from the HIGH_TEMPERATURES object. The resulting values are then logged to the console
 function userDestructuring() {
-const user = { name: 'John Doe', age: 34 };
-const { name, age } = user;
-return name + ' ' + age;
+    const user = { name: 'John Doe', age: 34 };
+    const { name, age } = user;
+    return name + ' ' + age;
 }
 console.log(userDestructuring()); // John Doe 34
 
 // Use Destructuring Assignment to Assign Variables from Nested Objects
-   // This example is similar to the first one but demonstrates how you can use a different variable name during destructuring. Instead of using today and tomorrow, it uses highToday2 and highTomorrow2
+// This example is similar to the first one but demonstrates how you can use a different variable name during destructuring. Instead of using today and tomorrow, it uses highToday2 and highTomorrow2
 const HIGH_TEMPERATURES = {
     yesterday: 75,
     today: 77,
@@ -1102,7 +1102,7 @@ console.log(highToday2); // 77
 console.log(highTomorrow2); // 80
 
 // Use Destructuring Assignment to Assign Variables from Nested Objects
-  // In this example, the LOCAL_FORECAST object has nested objects for each day. Destructuring is used to extract the low and high temperatures for today from the nested structure
+// In this example, the LOCAL_FORECAST object has nested objects for each day. Destructuring is used to extract the low and high temperatures for today from the nested structure
 const LOCAL_FORECAST = {
     yesterday: { low: 61, high: 75 },
     today: { low: 64, high: 77 },
@@ -1114,14 +1114,14 @@ console.log(highToday); // 77
 
 // Use Destructuring Assignment to Assign Variables from Arrays
 function assignVariablesFromArrays() {
-const [z, x] = [1, 2, 3, 4, 5, 6];
-return [z, x];
+    const [z, x] = [1, 2, 3, 4, 5, 6];
+    return [z, x];
 }
 console.log(assignVariablesFromArrays()); // 1, 2
 
 // can also access the value at any index in an array with destructuring by using commas to reach the desired index:
 assignVariablesFromArraysComma = () => {
-    const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+    const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
     return [a, b, c];
 }
 console.log(assignVariablesFromArraysComma()); // 1, 2, 5
@@ -1176,7 +1176,7 @@ const result2 = {
 function makeList(arr) {
     const failureItems = [];
     for (let i = 0; i < arr.length; i++) {
-      failureItems.push(`<li class="text-warning">${arr[i]}</li>`); // Remove the extra square brackets
+        failureItems.push(`<li class="text-warning">${arr[i]}</li>`); // Remove the extra square brackets
     }
     return failureItems;
 }
@@ -1184,7 +1184,7 @@ const failureList = makeList(result2.failure);
 console.log(failureList); // [ '<li class="text-warning">no-var</li>', '<li class="text-warning">var-on-top</li>', '<li class="text-warning">linebreak</li>' ]
 
 // Write Concise Object Literal Declarations Using Object Property Shorthand
-    // Consider the following code:
+// Consider the following code:
 const getMousePosition = (x, y) => ({
     x: x,
     y: y
@@ -1223,7 +1223,7 @@ console.log(person3);
 
 
 // In ES6 a class declaration has a constructor() method
-    // Explicit constructor
+// Explicit constructor
 class SpaceShuttle {
     constructor(targetPlanet) {
         this.targetPlanet = targetPlanet;
@@ -1256,8 +1256,8 @@ console.log(carrot.name); // 'carrot'
 
 
 // Use getters and setters to Control Access to an Object
-    // You can obtain values from an object and set the value of a property within an object
-    // These are classically called getters and setters
+// You can obtain values from an object and set the value of a property within an object
+// These are classically called getters and setters
 class Book {
     constructor(author) {
         this._author = author;
@@ -1283,10 +1283,10 @@ class Thermostat {
     constructor(fahrenheit) {
         this._fahrenheit = fahrenheit;
     }
-    get temperature () {
+    get temperature() {
         return (5 / 9) * (this._fahrenheit - 32);
     }
-    set temperature (celcius) {
+    set temperature(celcius) {
         this._fahrenheit = (celcius * 9.0) / 5 + 32;
     }
 }
@@ -1304,7 +1304,7 @@ const myPromise = new Promise((resolve, reject) => {
 // Complete a Promise with resolve and reject
 const condition = true; // define condition
 const myPromise2 = new Promise((resolve, reject) => {
-    if(condition) {
+    if (condition) {
         resolve("Promise was fulfilled");
     } else {
         reject("Promise was rejected");
@@ -1323,7 +1323,7 @@ console.log(makeServerRequest);
 const makeServerRequest2 = new Promise((resolve, reject) => {
     let responseFromServer = true; // define condition
 
-    if(responseFromServer) {
+    if (responseFromServer) {
         resolve("We got the data");
     } else {
         reject("Data not received");
@@ -1350,7 +1350,7 @@ console.log(makeServerRequest3);
 
 makeServerRequest3
     .then(result => {
-        console.log(result); 
+        console.log(result);
     });
 
 // Handle a Rejected Promise with catch
@@ -1374,7 +1374,7 @@ makeServerRequest4
     });
 
 // Regular Expressions (RegEx)
-    // Regular expressions are used in programming languages to match parts of strings
+// Regular expressions are used in programming languages to match parts of strings
 let testStr = "freeCodeCamp";
 let testRegex = /Code/;
 testRegex.test(testStr); // true
@@ -1408,10 +1408,10 @@ let resultCase = fccRegex.test(myStringCase);
 console.log(resultCase); // true
 
 // Exact Mathces using .match()
-    // Note that the .match syntax is the "opposite" of the .test method you have been using thus far:
-        // .match will return the acual value
-        // .test will return a boolean
-    let ourStrMatch = "Hello, World!";
+// Note that the .match syntax is the "opposite" of the .test method you have been using thus far:
+// .match will return the acual value
+// .test will return a boolean
+let ourStrMatch = "Hello, World!";
 let ourRegexMatch = /Hello/;
 let resultMatch = ourStrMatch.match(ourRegexMatch);
 console.log(resultMatch); // ["Hello"]
@@ -1471,7 +1471,7 @@ let resultVowel = quoteSample.match(vowelRegex);
 console.log(resultVowel); // ["e", "a", "e", "o", "u", "i", "e", "a", "o", "e", "o", "e", "I", "a", "e", "o", "o", "e", "i", "o", "e", "i"]
 
 // Match Letters of the Alphabet
-  // [-] hyphen inside a charecter set
+// [-] hyphen inside a charecter set
 let catStr = "cat";
 let batStr = "bat";
 let matStr = "mat";
@@ -1490,7 +1490,7 @@ let resultAlph = quoteSampleAlph.match(alphabetRegex);
 console.log(resultAlph); // ["T", "h", "e", "q", "u", "i", "c", "k", "b", "r", "o", "w", "n", "f", "o", "x", "j", "u", "m", "p", "s", "o", "v", "e", "r", "t", "h", "e", "l", "a", "z", "y", "d", "o", "g"]
 
 // Match Numbers and Letters of the Alphabet
-   // /[0-9a-z]/gi
+// /[0-9a-z]/gi
 let jennyStr = "Jenny8675309";
 let myRegexJenny = /[a-z0-9]/ig;
 jennyStr.match(myRegexJenny);
@@ -1505,14 +1505,14 @@ console.log(resultLettersNumbers); // ["l", "r", "3", "4", "5", "2", "6", "5", "
 
 
 // Match Single Characters Not Specified
-  // Negated character sets /[^]
+// Negated character sets /[^]
 let quoteSampleNeg = "3 blind mice.";
 let myRegexNeg = /[^aeiou0-9]/gi;
 let resultNeg = quoteSampleNeg.match(myRegexNeg);
 console.log(resultNeg); // [" ", "b", "l", "n", "d", " ", "m", "c", "."]
 
 // Match Characters that Occur One or More Times
-    // + plus sign
+// + plus sign
 let difficultSpelling = "Mississippi";
 let myRegexDiff = /s+/g;
 let resultDiff = difficultSpelling.match(myRegexDiff);
@@ -1534,10 +1534,10 @@ let resultChewie = chewieQuote.match(chewieRegex);
 console.log(resultChewie); // ["Aaaaaaaaaaaaaaaa"]
 
 // Find Characters with Lazy Matching
-  // greedy match finds the longest possible part of a string
-  // lazy match finds the smallest possible part of the string that satisfies the regex pattern
-    // greedy match /t[a-z]*i/ will match the entire string "titanic"
-    // lazy match /t[a-z]*?i/ will match only the letter "t"
+// greedy match finds the longest possible part of a string
+// lazy match finds the smallest possible part of the string that satisfies the regex pattern
+// greedy match /t[a-z]*i/ will match the entire string "titanic"
+// lazy match /t[a-z]*?i/ will match only the letter "t"
 let greedyStr = "titanic";
 let greedyRegex = /t[a-z]*i/;
 let resultGreedy = greedyStr.match(greedyRegex);
@@ -1591,7 +1591,7 @@ let resultLast = lastRegex.test(caboose);
 console.log(resultLast); // true
 
 // Match All Letters and Numbers
-  // \w is equal to [A-Za-z0-9_]
+// \w is equal to [A-Za-z0-9_]
 let longHand = /[A-Za-z0-9_]+/;
 let shortHand = /\w+/;
 let numbersAll = "42";
@@ -1610,15 +1610,15 @@ console.log(resultLongHand2); // true
 console.log(resultShortHand2); // true
 
 // Match All Letters and Numbers
-  // \w is equal to [A-Za-z0-9_]
-    //  shorthand character classes
+// \w is equal to [A-Za-z0-9_]
+//  shorthand character classes
 let quoteSampleAll = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g;
 let resultAll = quoteSampleAll.match(alphabetRegexV2).length;
 console.log(resultAll); // 31
 
 // Match Everything But Letters and Numbers
-    // \W is equal to [^A-Za-z0-9_]
+// \W is equal to [^A-Za-z0-9_]
 let shortHandNon = /\W/;
 let numbersNon = "42%";
 let sentenceNon = "Coding!";
@@ -1630,40 +1630,40 @@ console.log(resultNon); // ["%"]
 console.log(resultNon2); // ["!"]
 
 // Match Everything But Letters and Numbers
-    // \W is equal to [^A-Za-z0-9_]
+// \W is equal to [^A-Za-z0-9_]
 let quoteSampeNon = "The five boxing wizards jump quickly.";
 let nonAlphabetRegex = /\W/g;
 let resultNonAlphabet = quoteSampleAll.match(nonAlphabetRegex);
 console.log(resultNonAlphabet); // [" ", " ", " ", " ", " ", " ", "."]
 
 // Match all numbers
-    // \d is equal to [0-9]
+// \d is equal to [0-9]
 let movieNameNum = "2001: A Space Odyssey";
 let numRegex = /\d/g;
 let resultNum = movieNameNum.match(numRegex).length;
 console.log(resultNum); // 4
 
 // Match all non-numbers
-    // \D is equal to [^0-9]
+// \D is equal to [^0-9]
 let movieName = "2001: A Space Odyssey";
 let noNumRegex = /\D/g;
 let resultNoNum = movieName.match(noNumRegex).length;
 console.log(resultNoNum); // 17
 
 // Restrict Possible Usernames
-    // Usernames can only use alpha-numeric characters
-    // The only numbers in the username have to be at the end
-    // There can be zero or more of them at the end
-    // Username letters can be lowercase and uppercase
-    // Usernames have to be at least two characters long
-    // A two-character username can only use alphabet letters as characters
+// Usernames can only use alpha-numeric characters
+// The only numbers in the username have to be at the end
+// There can be zero or more of them at the end
+// Username letters can be lowercase and uppercase
+// Usernames have to be at least two characters long
+// A two-character username can only use alphabet letters as characters
 let username = "JackOfAllTrades";
 let userCheck = /^[a-z]([0-9][0-9]+|[a-z]+\d*)$/i;
 let resultUser = userCheck.test(username);
 console.log(resultUser); // true
 
 // Match Whitespace
-    // \s is equal to [\r\t\f\n\v]
+// \s is equal to [\r\t\f\n\v]
 let whiteSpace = "Whitespace. Whitespace everywhere!";
 let spaceRegex = /\s/g;
 whiteSpace.match(spaceRegex); // [" ", " "]
@@ -1671,7 +1671,7 @@ let resultWhiteSpace = whiteSpace.match(spaceRegex);
 console.log(resultWhiteSpace); // [" ", " "]
 
 // Match Non-Whitespace Characters
-    // \S is equal to [^\r\t\f\n\v]
+// \S is equal to [^\r\t\f\n\v]
 let notWhiteSpace = "Whitespace. Whitespace everywhere!";
 let nonSpaceRegex = /\S/g;
 whiteSpace.match(nonSpaceRegex).length; // 32
@@ -1684,8 +1684,8 @@ let resultNonWhiteSpace = sampleNon.match(countNonWhiteSpace);
 console.log(resultNonWhiteSpace); // ["W", "h", "i", "t", "e", "s", "p", "a", "c", "e", "i", "s", "i", "m", "p", "o", "r", "t", "a", "n", "t", "i", "n", "s", "e", "p", "a", "r", "a", "t", "i", "n", "g", "w", "o", "r", "d", "s"]
 
 // Specify Upper and Lower Number of Matches
-    // {lower, upper}
-    // {2, 6} will match between 2 and 6
+// {lower, upper}
+// {2, 6} will match between 2 and 6
 let A4 = "aaaah";
 let A2 = "aah";
 let multipleA = /a{3,5}h/;
@@ -1703,7 +1703,7 @@ let resultOh = ohRegex.test(ohStr);
 console.log(resultOh); // true
 
 // Specify Exact Number of Matches
-  // For example, to match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/
+// For example, to match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/
 let A4Exact = "haaaah";
 let A2Exact = "haah";
 let A100Exact = "h" + "a".repeat(100) + "h";
@@ -1729,7 +1729,7 @@ console.log(resultTime); // true
 
 
 // Check for all or none
-    // ? question mark
+// ? question mark
 let american = "color";
 let british = "colour";
 let rainbowRegex = /colou?r/;
@@ -1748,8 +1748,8 @@ console.log(resultWord); // true
 
 
 // Positive and Negative Lookahead
-    // (?=...)
-    // (?!...)
+// (?=...)
+// (?!...)
 let quit = "qu";
 let noquit = "qt";
 let quRegex = /q(?=u)/; // matches q only if it is followed by a u
@@ -1762,7 +1762,7 @@ console.log(resultQu); // ["q"]
 console.log(resultNoQu); // ["q"]
 
 // Positive and Negative Lookahead
-  // Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number
+// Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number
 let password = "abc123";
 let checkPass = /(?=\w{3,6})(?=\D*\d)/; // matches passwords that are greater than 3 characters long, do not begin with numbers, and have two consecutive digits
 checkPass.test(password); // true
@@ -1777,8 +1777,8 @@ let resultSampleWord = pwRegex.test(sampleWord);
 console.log(resultSampleWord); // false
 
 // Check For Mixed Grouping of Characters
-    // () parenthesis
-    // To find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+// () parenthesis
+// To find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
 let testStrGroup = "Pumpkin";
 let testRegexMixed = /P(engu|umpk)in/;
 testRegexMixed.test(testStrGroup); // true
@@ -1793,7 +1793,7 @@ let myRegexMixed = /(Franklin\s|Eleanor\s).*Roosevelt/;
 let resultMixed2 = myRegexMixed.test(myStringMixed);
 console.log(resultMixed2); // true
 
-function fizzBuzz () {
+function fizzBuzz() {
     // create a function that counts from 1 - 100
     // multiples of 3 print fizz
     // multiples of 5 print buzz
@@ -1802,13 +1802,15 @@ function fizzBuzz () {
         // if i is a multiple if 
         if (i % 3 === 0 && i % 5 === 0) {
             console.log("fizzBuzz");
-        } else if  (i % 3 === 0) {
+        } else if (i % 3 === 0) {
             console.log("fizz");
         } else if (i % 5 === 0) {
             console.log("buzz");
+        } else {
+            console.log(i);
         }
     }
-    }
+}
 fizzBuzz();
 
 function myFunc() {
@@ -1816,7 +1818,7 @@ function myFunc() {
 }
 myFunc();
 
-function fizzBuzz2 () {
+function fizzBuzz2() {
     for (let i = 1; i <= 15; i++) {
         if (i % 3 === 0 && i & 5 === 0) {
             console.log("fizzBuzz");
@@ -1824,12 +1826,14 @@ function fizzBuzz2 () {
             console.log("fizz");
         } else if (i % 5 === 0) {
             console.log("buzz");
+        } else {
+            console.log(i);
         }
     }
 }
 fizzBuzz2();
 
-const fizzBuzz3 = () => { 
+const fizzBuzz3 = () => {
     for (let i = 1; i <= 15; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             console.log("fizzBuzz");
@@ -1837,6 +1841,8 @@ const fizzBuzz3 = () => {
             console.log("fizz");
         } else if (i % 5 === 0) {
             console.log("Buzz");
+        } else {
+            console.log(i);
         }
     }
 }
@@ -1844,18 +1850,20 @@ fizzBuzz3()
 
 function fizzBuzz4() {
     // create a for loop that holds a variable for the value of i = 1
-      // if i is less than 15 then iterate to the next number
+    // if i is less than 15 then iterate to the next number
     for (let i = 1; i <= 15; i++) {
         // check for multiples of each number from 1 - 15
-          // if number if multiple of 3 then print fizz to the console
-            // if number if multiple of 5 then print buzz to the console
-              // if number if multiple of 3 and 5 then print fizzBuzz to the console
+        // if number if multiple of 3 then print fizz to the console
+        // if number if multiple of 5 then print buzz to the console
+        // if number if multiple of 3 and 5 then print fizzBuzz to the console
         if (i % 3 === 0 && i % 5 === 0) {
             console.log("fizzBuzz");
         } else if (i % 3 === 0) {
             console.log("fizz");
         } else if (i % 5 === 0) {
             console.log("Buzz");
+        } else {
+            console.log(i);
         }
     }
 }
@@ -1871,7 +1879,74 @@ function fizzBuzz5() {
         }
         else if (i % 5 === 0) {
             console.log("Buzz");
+        } else {
+            console.log(i);
         }
     }
 }
 fizzBuzz5()
+
+function fizzBuzz6() {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        }
+        else if (i % 3 === 0) {
+            console.log("fizz");
+        }
+        else if (i % 5 === 0) {
+            console.log("buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz6();
+
+const fizzBuzz7 = () => {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz7");
+        } else if (i % 3 === 0) {
+            console.log("fizz7");
+        } else if (i % 5 === 0) {
+            console.log("buzz7");
+        }
+        else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz7()
+
+// Given an array, find the two elements that sum to a specific value
+const twoSum = (nums, target) => {
+    // create a for loop that iterates through the array
+    for (let i = 0; i < nums.length; i++) {
+        // create a second for loop that iterates through the array
+        for (let j = 0; j < nums.length; j++) {
+            // if the two numbers add up to the target value then return the two numbers
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
+}
+console.log(twoSum([2, 7, 11, 15], 9)); // [0, 1]
+
+// Implement a function to check if a string is a palindrome.
+// A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward
+const isPalindrome = (str) => {
+    // create a for loop that iterates through the string
+    for (let i = 0; i < str.length; i++) {
+        // if the string is equal to the string reversed then return true
+        if (str === str.split("").reverse().join("")) {
+            return true;
+        }
+        // else return false
+        else {
+            return false;
+        }
+    }
+}
+console.log(isPalindrome("racecar")); // true
