@@ -1978,3 +1978,20 @@ const hasDuplicates = (arr) => {
 }
 console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9])); // false
 console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9, 1])); // true
+
+function fizzBuzz8 () {
+    for (let i = 1; i <= 15; i++)
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz8");
+        }
+        else if (i % 3 === 0) {
+            console.log("fizz8");
+        }
+        else if (i % 5 === 0) {
+            console.log("buzz8");
+        }
+        else {
+            console.log(i);
+        }
+}
+fizzBuzz8();
