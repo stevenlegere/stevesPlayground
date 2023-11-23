@@ -1811,6 +1811,18 @@ let resultRepeatNum = reRegex.test(repeatNum);
 console.log(resultRepeatNum); // true
 console.log(repeatNum.match(reRegex)); // ["42 42 42", "42"]
 
+// Use Capture Groups to Search and Replace
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText = wrongText.replace(silverRegex, "blue");
+console.log(wrongText); // "The sky is blue."
+
+// You can also access capture groups in the replacement string with dollar signs ($).
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1'); // "Camp Code"
+console.log("Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1')); // "Camp Code"
+
+
+
 
 
 function fizzBuzz() {
