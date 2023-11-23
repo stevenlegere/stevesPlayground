@@ -133,3 +133,28 @@ FROM STATION
 ORDER BY LENGTH(CITY) DESC, CITY ASC
 LIMIT 1;
 // Marine On Saint Croix 21
+
+// Query the list of CITY names starting with vowels (i.e., a, e, i, o, or u) from STATION. Your result cannot contain duplicates.
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%'
+// or
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[AEIOU]'
+// or
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[AEIOUaeiou]'
+
+
+// JOINS
+// Suppose you want to retrieve a list of employees along with their department names. You would use an INNER JOIN to match rows in the employees table with corresponding rows in the departments table based on the common dept_id
+SELECT emp_id, emp_name, salary, dept_name
+FROM employees
+INNER JOIN departments ON employees.dept_id = departments.dept_id;
+
+// retrieve a list of all departments and the employees in each department, including departments without any employees. You would use a LEFT OUTER JOIN to include all rows from the departments table and the matching rows from the employees table, if they exist:
+SELECT dept_id, dept_name, emp_id, emp_name, salary
+FROM departments
+LEFT JOIN employees ON departments.dept_id = employees.dept_id;
