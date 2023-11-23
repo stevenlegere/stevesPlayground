@@ -1793,6 +1793,26 @@ let myRegexMixed = /(Franklin\s|Eleanor\s).*Roosevelt/;
 let resultMixed2 = myRegexMixed.test(myStringMixed);
 console.log(resultMixed2); // true
 
+// Reuse Patterns Using Capture Groups
+// () parenthesis
+let repeatStr = "row row row your boat";
+let repeatRegex = /(\w+) \1 \1/;
+repeatRegex.test(repeatStr); // true
+repeatStr.match(repeatRegex); // ["row row row", "row"]
+console.log(repeatRegex.test(repeatStr)); // true
+console.log(repeatStr.match(repeatRegex)); // ["row row row", "row"]
+
+
+// Use capture groups in reRegex to match a string that consists of only the same number repeated exactly three times separated by single spaces
+// Your regex should not match the string 42\t42\t42
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+) \1 \1$/;
+let resultRepeatNum = reRegex.test(repeatNum);
+console.log(resultRepeatNum); // true
+console.log(repeatNum.match(reRegex)); // ["42 42 42", "42"]
+
+
+
 function fizzBuzz() {
     // create a function that counts from 1 - 100
     // multiples of 3 print fizz
@@ -1995,3 +2015,4 @@ function fizzBuzz8 () {
         }
 }
 fizzBuzz8();
+ 
