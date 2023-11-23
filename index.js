@@ -1818,10 +1818,15 @@ wrongText = wrongText.replace(silverRegex, "blue");
 console.log(wrongText); // "The sky is blue."
 
 // You can also access capture groups in the replacement string with dollar signs ($).
-"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1'); // "Camp Code"
+// "Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1'); // "Camp Code"
 console.log("Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1')); // "Camp Code"
 
-
+// Write a regex that updates string one two three to string three two one
+let fixRegStr = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/;
+let replaceText = "$3 $2 $1";
+let resultFixRegStr = fixRegStr.replace(fixRegex, replaceText);
+console.log(resultFixRegStr); // "three two one"
 
 
 
