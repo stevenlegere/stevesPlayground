@@ -2049,3 +2049,11 @@ let three = "3";
 console.log(typeof seven); // number
 console.log(typeof three); // string
 console.log(seven + three); // 73
+
+// Catch Misspelled Variable and Function Names
+
+// Catch Unclosed Parentheses, Brackets, Braces and Quotes
+let myArray = [1, 2, 3];
+let arraySum = myArray.reduce((previous, current) => previous + current); // 6 becasuse .reduce is not closed
+console.log(`Sum of array values is: ${arraySum}`); // Sum of array values is: 6
+// reduce method in JavaScript is a way of iteratively reducing an array to a single value, often by applying a specified function that combines the elements
