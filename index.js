@@ -1372,6 +1372,210 @@ makeServerRequest4
     .catch((error) => {
         console.log(error); // Data not received
     });
+function fizzBuzz() {
+    // create a function that counts from 1 - 100
+    // multiples of 3 print fizz
+    // multiples of 5 print buzz
+    // multiples of both 3 and 5 print fizzBuzz
+    for (let i = 1; i <= 15; i++) {
+        // if i is a multiple if 
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz();
+
+function myFunc() {
+    console.log("Hello Then");
+}
+myFunc();
+
+function fizzBuzz2() {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i & 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz2();
+
+const fizzBuzz3 = () => {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz3()
+
+function fizzBuzz4() {
+    // create a for loop that holds a variable for the value of i = 1
+    // if i is less than 15 then iterate to the next number
+    for (let i = 1; i <= 15; i++) {
+        // check for multiples of each number from 1 - 15
+        // if number if multiple of 3 then print fizz to the console
+        // if number if multiple of 5 then print buzz to the console
+        // if number if multiple of 3 and 5 then print fizzBuzz to the console
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz4()
+
+function fizzBuzz5() {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzzz");
+        }
+        else if (i % 3 === 0) {
+            console.log("Fizzz");
+        }
+        else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz5()
+
+function fizzBuzz6() {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz");
+        }
+        else if (i % 3 === 0) {
+            console.log("fizz");
+        }
+        else if (i % 5 === 0) {
+            console.log("buzz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz6();
+
+const fizzBuzz7 = () => {
+    for (let i = 1; i <= 15; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz7");
+        } else if (i % 3 === 0) {
+            console.log("fizz7");
+        } else if (i % 5 === 0) {
+            console.log("buzz7");
+        }
+        else {
+            console.log(i);
+        }
+    }
+}
+fizzBuzz7()
+
+// Given an array, find the two elements that sum to a specific value
+const twoSum = (nums, target) => {
+    // create a for loop that iterates through the array
+    for (let i = 0; i < nums.length; i++) {
+        // create a second for loop that iterates through the array
+        for (let j = 0; j < nums.length; j++) {
+            // if the two numbers add up to the target value then return the two numbers
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
+}
+console.log(twoSum([2, 7, 11, 15], 9)); // [0, 1]
+
+// Implement a function to check if a string is a palindrome.
+// A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward
+const isPalindrome = (str) => {
+    // create a for loop that iterates through the string
+    for (let i = 0; i < str.length; i++) {
+        // if the string is equal to the string reversed then return true
+        if (str === str.split("").reverse().join("")) {
+            return true;
+        }
+        // else return false
+        else {
+            return false;
+        }
+    }
+}
+console.log(isPalindrome("racecar")); // true
+
+// Reverse a string without using library functions
+const reverseString = (str) => {
+    // create a for loop that iterates through the string
+    for (let i = 0; i < str.length; i++) {
+        // return the string reversed
+        return str.split("").reverse().join("");
+    }
+}
+console.log(reverseString("hello")); // olleh
+
+// Implement a function to check for duplicates in an array
+const hasDuplicates = (arr) => {
+    // create a for loop that iterates through the array
+    for (let i = 0; i < arr.length; i++) {
+        // create a second for loop that iterates through the array
+        for (let j = 0; j < arr.length; j++) {
+            // if the two numbers are equal then return true
+            if (arr[i] === arr[j] && i !== j) {
+                return true;
+            }
+        }
+    }
+    // else return false
+    return false;
+}
+console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9])); // false
+console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9, 1])); // true
+
+function fizzBuzz8() {
+    for (let i = 1; i <= 15; i++)
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuzz8");
+        }
+        else if (i % 3 === 0) {
+            console.log("fizz8");
+        }
+        else if (i % 5 === 0) {
+            console.log("buzz8");
+        }
+        else {
+            console.log(i);
+        }
+}
+fizzBuzz8();
+
+
 
 // Regular Expressions (RegEx)
 // Regular expressions are used in programming languages to match parts of strings
@@ -1828,208 +2032,20 @@ let replaceText = "$3 $2 $1";
 let resultFixRegStr = fixRegStr.replace(fixRegex, replaceText);
 console.log(resultFixRegStr); // "three two one"
 
+// Remove Whitespace from Start and End
+let helloWhiteSpace = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g;
+let resultWhiteSpace2 = helloWhiteSpace.replace(wsRegex, "");
+console.log(resultWhiteSpace2); // "Hello, World!"
 
+// Debugging
+// console.log(); // prints to the console
+// console.clear(); // clears the console
 
-function fizzBuzz() {
-    // create a function that counts from 1 - 100
-    // multiples of 3 print fizz
-    // multiples of 5 print buzz
-    // multiples of both 3 and 5 print fizzBuzz
-    for (let i = 1; i <= 15; i++) {
-        // if i is a multiple if 
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("fizz");
-        } else if (i % 5 === 0) {
-            console.log("buzz");
-        } else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz();
-
-function myFunc() {
-    console.log("Hello Then");
-}
-myFunc();
-
-function fizzBuzz2() {
-    for (let i = 1; i <= 15; i++) {
-        if (i % 3 === 0 && i & 5 === 0) {
-            console.log("fizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("fizz");
-        } else if (i % 5 === 0) {
-            console.log("buzz");
-        } else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz2();
-
-const fizzBuzz3 = () => {
-    for (let i = 1; i <= 15; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("fizz");
-        } else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz3()
-
-function fizzBuzz4() {
-    // create a for loop that holds a variable for the value of i = 1
-    // if i is less than 15 then iterate to the next number
-    for (let i = 1; i <= 15; i++) {
-        // check for multiples of each number from 1 - 15
-        // if number if multiple of 3 then print fizz to the console
-        // if number if multiple of 5 then print buzz to the console
-        // if number if multiple of 3 and 5 then print fizzBuzz to the console
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("fizz");
-        } else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz4()
-
-function fizzBuzz5() {
-    for (let i = 1; i <= 15; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("FizzBuzzz");
-        }
-        else if (i % 3 === 0) {
-            console.log("Fizzz");
-        }
-        else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz5()
-
-function fizzBuzz6() {
-    for (let i = 1; i <= 15; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzBuzz");
-        }
-        else if (i % 3 === 0) {
-            console.log("fizz");
-        }
-        else if (i % 5 === 0) {
-            console.log("buzz");
-        } else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz6();
-
-const fizzBuzz7 = () => {
-    for (let i = 1; i <= 15; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzBuzz7");
-        } else if (i % 3 === 0) {
-            console.log("fizz7");
-        } else if (i % 5 === 0) {
-            console.log("buzz7");
-        }
-        else {
-            console.log(i);
-        }
-    }
-}
-fizzBuzz7()
-
-// Given an array, find the two elements that sum to a specific value
-const twoSum = (nums, target) => {
-    // create a for loop that iterates through the array
-    for (let i = 0; i < nums.length; i++) {
-        // create a second for loop that iterates through the array
-        for (let j = 0; j < nums.length; j++) {
-            // if the two numbers add up to the target value then return the two numbers
-            if (nums[i] + nums[j] === target) {
-                return [i, j];
-            }
-        }
-    }
-}
-console.log(twoSum([2, 7, 11, 15], 9)); // [0, 1]
-
-// Implement a function to check if a string is a palindrome.
-// A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward as forward
-const isPalindrome = (str) => {
-    // create a for loop that iterates through the string
-    for (let i = 0; i < str.length; i++) {
-        // if the string is equal to the string reversed then return true
-        if (str === str.split("").reverse().join("")) {
-            return true;
-        }
-        // else return false
-        else {
-            return false;
-        }
-    }
-}
-console.log(isPalindrome("racecar")); // true
-
-// Reverse a string without using library functions
-const reverseString = (str) => {
-    // create a for loop that iterates through the string
-    for (let i = 0; i < str.length; i++) {
-        // return the string reversed
-        return str.split("").reverse().join("");
-    }
-}
-console.log(reverseString("hello")); // olleh
-
-// Implement a function to check for duplicates in an array
-const hasDuplicates = (arr) => {
-    // create a for loop that iterates through the array
-    for (let i = 0; i < arr.length; i++) {
-        // create a second for loop that iterates through the array
-        for (let j = 0; j < arr.length; j++) {
-            // if the two numbers are equal then return true
-            if (arr[i] === arr[j] && i !== j) {
-                return true;
-            }
-        }
-    }
-    // else return false
-    return false;
-}
-console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9])); // false
-console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9, 1])); // true
-
-function fizzBuzz8 () {
-    for (let i = 1; i <= 15; i++)
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzBuzz8");
-        }
-        else if (i % 3 === 0) {
-            console.log("fizz8");
-        }
-        else if (i % 5 === 0) {
-            console.log("buzz8");
-        }
-        else {
-            console.log(i);
-        }
-}
-fizzBuzz8();
- 
+// Use typeof to Check the Type of a Variable
+// You can use typeof to check the data structure, or type, of a variable
+let seven = 7;
+let three = "3";
+console.log(typeof seven); // number
+console.log(typeof three); // string
+console.log(seven + three); // 73
