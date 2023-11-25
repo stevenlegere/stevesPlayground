@@ -2054,6 +2054,18 @@ console.log(seven + three); // 73
 
 // Catch Unclosed Parentheses, Brackets, Braces and Quotes
 let myArray = [1, 2, 3];
-let arraySum = myArray.reduce((previous, current) => previous + current); // 6 becasuse .reduce is not closed
+let arraySum = myArray.reduce((accumulator, currentValue) => accumulator + currentValue); // 6
 console.log(`Sum of array values is: ${arraySum}`); // Sum of array values is: 6
 // reduce method in JavaScript is a way of iteratively reducing an array to a single value, often by applying a specified function that combines the elements
+// accumulator: This parameter holds the accumulated result of the reduction. It's the running total or value that gets updated at each step of the iteration.
+// currentValue: This parameter represents the current element in the array that is being processed. It's the value of the current iteration
+// sum, value are also common names for these parameters
+
+function myFunction() {
+    return "You rock!";
+}
+let varOne = myFunction;
+let varTwo = myFunction();
+console.log(varOne); // [Function: myFunction]
+console.log(varTwo); // You rock!
+
