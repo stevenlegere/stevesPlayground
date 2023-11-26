@@ -2069,3 +2069,41 @@ let varTwo = myFunction();
 console.log(varOne); // [Function: myFunction]
 console.log(varTwo); // You rock!
 
+// Catch Off By One Errors When Using Indexing
+// Off by one errors (sometimes called OBOE) crop up when you're trying to target a specific index of a string or array (to slice or access a segment), or when looping over the indices of them
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let len = alphabet.length;
+// for (let i = 0; i <= len; i++) {
+//     // loops one too many times at the end
+//     console.log(alphabet[i]);
+// }
+// for (let j = 1; j < len; j++) {
+//     // loops one too few times and misses the first character at index 0
+//     console.log(alphabet[j]);
+// }
+for (let k = 0; k < len; k++) {
+    // correct version
+    console.log(alphabet[k]);
+}
+// Catch Off By One Errors When Using Indexing
+
+// Use Caution When Reinitializing Variables Inside a Loop
+// Sometimes it's necessary to save information, increment counters, or re-set variables within a loop
+// The following function is supposed to create a two-dimensional array with m rows and n columns of zeroes
+function zeroArray(m, n) {
+    // Creates a 2-D array with m rows and n columns of zeroes
+    let newArray = [];
+    for (let i = 0; i < m; i++) {
+        // Adds the m-th row into newArray
+        let row = []; // re-initializes row variable
+        for (let j = 0; j < n; j++) {
+            // Pushes n zeroes into the current row to create the columns
+            row.push(0);
+        }
+        // Pushes the current row, which now has n zeores in it, to the array
+        newArray.push(row);
+    }
+    return newArray;
+}
+let matrix = zeroArray(3, 2);
+console.log(matrix); // [[0, 0], [0, 0], [0, 0]]
