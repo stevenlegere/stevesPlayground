@@ -2107,3 +2107,57 @@ function zeroArray(m, n) {
 }
 let matrix = zeroArray(3, 2);
 console.log(matrix); // [[0, 0], [0, 0], [0, 0]]
+
+
+// JavaScript Data Structures
+
+// Use an Array to Store a Collection of Data
+let simpleArray = ["one", 2, "three", true, false, undefined, null];
+console.log(simpleArray.length); // 7
+
+let complexArray = [
+    [
+        {
+            one: 1,
+            two: 2
+        },
+        {
+            three: 3,
+            four: 4
+        }
+    ],
+    [
+        {
+            a: "a",
+            b: "b"
+        },
+        {
+            c: "c",
+            d: "d"
+        }
+    ]
+];
+console.log(complexArray.length); // 2
+console.log(complexArray[0]); // [ { one: 1, two: 2 }, { three: 3, four: 4 } ]
+console.log(complexArray[0][0]); // { one: 1, two: 2 }
+console.log(complexArray[0][0].one); // 1
+console.log(complexArray[0][0]["one"]); // 1
+console.log(complexArray[0][1].four); // 4
+console.log(complexArray[0][1]["four"]); // 4
+console.log(complexArray[1]); // [ { a: 'a', b: 'b' }, { c: 'c', d: 'd' } ]
+
+// Complete the statement by assigning an array of at least 5 elements in length to the myArray variable
+let myArray2 = ["a", "b", "c", "d", "e", 1, false];
+console.log(myArray2.length); // 6
+
+// Access an Array's Contents Using Bracket Notation
+let ourArray = ["a", "b", "c"];
+let ourVariable = ourArray[0];
+console.log(ourVariable); // a
+ourArray[1] = "not b anymore";
+console.log(ourArray); // [ 'a', 'not b anymore', 'c' ]
+
+// set the 2nd position (index 1) of myArray to anything you want, besides the letter b
+let myArray3 = ["a", "b", "c", "d"];
+myArray3[1] = "not b anymore";
+console.log(myArray3); // [ 'a', 'not b anymore', 'c', 'd' ]
