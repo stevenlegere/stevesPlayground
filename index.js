@@ -2161,3 +2161,48 @@ console.log(ourArray); // [ 'a', 'not b anymore', 'c' ]
 let myArray3 = ["a", "b", "c", "d"];
 myArray3[1] = "not b anymore";
 console.log(myArray3); // [ 'a', 'not b anymore', 'c', 'd' ]
+
+// Codewars Kata
+  // https://www.codewars.com/kata/5bb904724c47249b10000131/train/javascript
+function points(games) {
+    let total = 0;
+    // create a for loop that iterates through the array
+    for (let i = 0; i < games.length; i++) {
+        // create a variable for the first number
+        let x = games[i][0];
+        // create a variable for the second number
+        let y = games[i][2];
+        // if the first number is greater than the second number then add 3 points to the total
+        if (x > y) {
+            total += 3;
+        }
+        // if the first number is less than the second number then add 0 points to the total
+        // if the first number is equal to the second number then add 1 point to the total
+        else if (x === y) {
+            total +=1;
+        }
+    }
+    // return the total
+    return total;
+}
+console.log(points(["3:1", "2:2", "0:1"])); // 7
+console.log(points(["1:0", "2:0", "3:0"])); // 9
+console.log(points(["1:1", "2:2", "3:3"])); // 3
+console.log(points(["1:0", "0:0", "0:1"])); // 4
+
+// Add Items to an Array with push() and unshift()
+// push() adds elements to the end of an array
+// unshift() adds elements to the beginning of an array
+let twentyThree = "XXIII";
+let romanNumerals = ["XXI", "XXII"];
+romanNumerals.unshift("XIX", "XX");
+romanNumerals.push(twentyThree);
+console.log(romanNumerals); // [ 'XIX', 'XX', 'XXI', 'XXII', 'XXIII' ]
+
+
+function mixedNumbers(arr) {
+    arr.unshift("I", 2, "three");
+    arr.push(7, "viii", 9);
+    return arr;
+}
+console.log(mixedNumbers(["IV", 5, "six"])); // [ 'I', 2, 'three', 'IV', 5, 'six', 7, 'viii', 9 ]
