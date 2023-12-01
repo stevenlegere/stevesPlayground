@@ -2206,3 +2206,23 @@ function mixedNumbers(arr) {
     return arr;
 }
 console.log(mixedNumbers(["IV", 5, "six"])); // [ 'I', 2, 'three', 'IV', 5, 'six', 7, 'viii', 9 ]
+
+// Remove Items from an Array with pop() and shift()
+// pop() removes an element from the end of an array
+// shift() removes an element from the beginning of an array
+let greetings = ["whats up?", "hello", "see ya!"];
+console.log(greetings); // [ 'whats up?', 'hello', 'see ya!' ]
+greetings.pop();
+console.log(greetings); // [ 'whats up?', 'hello' ]
+greetings.shift();
+console.log(greetings); // [ 'hello' ]
+
+let popped = greetings.pop();
+console.log(popped); // hello
+
+function popShift(arr) {
+    let popped = arr.pop();
+    let shifted = arr.shift();
+    return [shifted, popped];
+}
+console.log(popShift(["challenge", "is", "not", "complete"])); // [ 'challenge', 'complete' ]
