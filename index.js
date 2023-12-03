@@ -2226,3 +2226,20 @@ function popShift(arr) {
     return [shifted, popped];
 }
 console.log(popShift(["challenge", "is", "not", "complete"])); // [ 'challenge', 'complete' ]
+
+////////////////////
+
+// Remove Items Using splice()
+// splice() allows us to do just that: remove any number of consecutive elements from anywhere in an array
+// splice() can take up to 3 parameters
+// first parameter represents the index on the array from which to begin removing elements
+// second parameter indicates the number of elements to delete
+// third parameter is the element(s) to add to the array, beginning at the same index
+let arraySplice = ["today", "was", "not", "so", "great"];
+arraySplice.splice(2, 2); // remove 2 elements beginning with the 3rd element
+console.log(arraySplice); // [ 'today', 'was', 'great' ]
+
+// .splice() returns a new array containing the extracted elements
+let arraySplice2 = ["I", "am", "feeling", "really", "happy"];
+let newArraySplice = arraySplice2.splice(3, 2);
+console.log(newArraySplice); // [ 'really', 'happy' ]
