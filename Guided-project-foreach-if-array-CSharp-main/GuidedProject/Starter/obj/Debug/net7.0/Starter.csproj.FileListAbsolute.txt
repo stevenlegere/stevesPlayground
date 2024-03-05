@@ -1,0 +1,14 @@
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/bin/Debug/net7.0/Starter
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/bin/Debug/net7.0/Starter.deps.json
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/bin/Debug/net7.0/Starter.runtimeconfig.json
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/bin/Debug/net7.0/Starter.dll
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/bin/Debug/net7.0/Starter.pdb
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/Starter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/Starter.AssemblyInfoInputs.cache
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/Starter.AssemblyInfo.cs
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/Starter.csproj.CoreCompileInputs.cache
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/Starter.dll
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/refint/Starter.dll
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/Starter.pdb
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/Starter.genruntimeconfig.cache
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/Guided-project-foreach-if-array-CSharp-main/GuidedProject/Starter/obj/Debug/net7.0/ref/Starter.dll
