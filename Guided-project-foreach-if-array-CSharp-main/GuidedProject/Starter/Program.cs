@@ -4,32 +4,10 @@
 int currentAssignments = 5; // variable, currentAssignments is used to hold the number of exams that have been scored
 
 // create an integer array that will be used for Sophia's assignment scores
-int[] sophiaScores = new int[5]; // the new operator is to specify that you're creating a new instance of an array
-
-// variables that are used to hold the scores of graded assignments
-int sophia1 = 90;
-int sophia2 = 86;
-int sophia3 = 87;
-int sophia4 = 98;
-int sophia5 = 100;
-
-int andrew1 = 92;
-int andrew2 = 89;
-int andrew3 = 81;
-int andrew4 = 96;
-int andrew5 = 90;
-
-int emma1 = 90;
-int emma2 = 85;
-int emma3 = 87;
-int emma4 = 98;
-int emma5 = 68;
-
-int logan1 = 90;
-int logan2 = 95;
-int logan3 = 87;
-int logan4 = 88;
-int logan5 = 96;
+int[] sophiaScores = new int[] { 90, 86, 87, 98, 100 }; // the new operator is to specify that you're creating a new instance of an array
+int[] andrewScores = new int[] { 92, 89, 81, 96, 90 };
+int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
+int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
 
 // These variables are integers that are being used to hold the sum of the exam scores.
 int sophiaSum = 0;
