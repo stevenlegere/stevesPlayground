@@ -9,28 +9,39 @@ int[] andrewScores = new int[] { 92, 89, 81, 96, 90 };
 int[] emmaScores = new int[] { 90, 85, 87, 98, 68 };
 int[] loganScores = new int[] { 90, 95, 87, 88, 96 };
 
-// These variables are integers that are being used to hold the sum of the exam scores.
-int sophiaSum = 0;
+// Student names
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
-
-// These variables are decimals that are used to hold the calculated average score.
-decimal sophiaScore;
-
-foreach (int score in sophiaScores)
+foreach (string name in studentNames)
 {
-    // add the exam score to the sum
-    sophiaSum += score;
-}
 
-// These equations calculates the average score
+    // These variables are integers that are being used to hold the sum of the exam scores.
+    int sophiaSum = 0;
+
+
+    // These variables are decimals that are used to hold the calculated average score.
+    decimal sophiaScore;
+
+    foreach (int score in sophiaScores)
+    {
+        // add the exam score to the sum
+        sophiaSum += score;
+        // Once your foreach loop has iterated through all of the values in the sophiaScores array, sophiaSum will contain the sum of her scores
+    }
+
+    // These equations calculates the average score
     // The numerator is cast as a decimal to ensure the division retains the fractional component
-sophiaScore = (decimal)sophiaSum / currentAssignments;
+    sophiaScore = (decimal)sophiaSum / currentAssignments;
 
 
-Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+    Console.WriteLine("Student\t\tGrade\n");
+    Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
 
+
+}
 
 Console.WriteLine("Press the Enter key to continue");
 Console.ReadLine(); // This will pause the program until the user presses the Enter key
+
+
 
