@@ -8,14 +8,20 @@ int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 }; // the new opera
 int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
 int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
 int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
+int[] beckyScores = new int[] {92, 91, 90, 91, 92, 92, 92 };
+int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
+int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
+int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };
+
 
 // Student names
-string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor"};
 
 int[] studentScores = new int[10]; // This creates an array of integers that can hold 10 values
 
 string currentStudentLetterGrade = ""; // This creates a string variable that will be used to hold the letter grade for the current student
 
+// Write the Report Header to the console
 Console.WriteLine("Student\t\tGrade\n");
 
 foreach (string name in studentNames)
@@ -35,18 +41,45 @@ foreach (string name in studentNames)
     else if (currentStudent == "Logan")
         studentScores = loganScores;
 
-    // These variables are integers that are being used to hold the sum of the exam scores.
+    else if (currentStudent == "Becky")
+        studentScores = beckyScores;
+
+    else if (currentStudent == "Chris")
+        studentScores = chrisScores;
+
+    else if (currentStudent == "Eric")
+        studentScores = ericScores;
+
+    else if (currentStudent == "Gregor")
+        studentScores = gregorScores;
+    
+    else
+        continue;
+
+    // initialize/reset the sum of scored assignments
     int sumAssignmentScores = 0;
-    // These variables are decimals that are used to hold the calculated average score.
+
+    // initialize/reset the calculated average of exam + extra credit scores
     decimal currentStudentGrade;
 
-    int gradedAssignments = 0; // // initialize/reset a counter for the number of assignments
+    // initialize/reset a counter for the number of assignment
+    int gradedAssignments = 0;
 
+    // loop through the scores array and complete calculations for currentStudent
     foreach (int score in studentScores)
     {
-        // add the exam score to the sum
-        sumAssignmentScores += score;
-        // Once your foreach loop has iterated through all of the values in the sophiaScores array, sophiaSum will contain the sum of her scores
+
+        // increment the assignment counter
+        gradedAssignments += 1;
+
+        // create an if statement that evaluates the expression
+        if (gradedAssignments <= examAssignments)
+            // add the exam score to the sum
+            sumAssignmentScores += score;
+        else
+        // add the extra credit points to the sum - bonus points equal to 10% of an exam score
+        sumAssignmentScores += score / 10;
+
     }
 
     // These equations calculates the average score
