@@ -80,18 +80,18 @@ foreach (string name in studentNames)
 
         if (gradedAssignments <= examAssignments)
             {
-                sumExamScores += score;
+                sumExamScores = sumExamScores + score;
             }
 
         else
         {
             gradedExtraCreditAssignments += 1;
-            sumExtraCreditScores += score / 10;
+            sumExtraCreditScores += score;
         }
     }
 
    currentStudentExamScore = (decimal)(sumExamScores) / examAssignments;
-   currentStudentExtraCreditScore = (decimal)(sumExtraCreditScores) / gradedAssignments;
+   currentStudentExtraCreditScore = (decimal)(sumExtraCreditScores) / gradedExtraCreditAssignments;
 
    currentStudentGrade = (decimal)((decimal)sumExamScores + ((decimal)sumExtraCreditScores / 10)) / examAssignments;
 
