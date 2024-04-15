@@ -1,0 +1,15 @@
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/bin/Debug/net8.0/SwitchCase
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/bin/Debug/net8.0/SwitchCase.deps.json
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/bin/Debug/net8.0/SwitchCase.runtimeconfig.json
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/bin/Debug/net8.0/SwitchCase.dll
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/bin/Debug/net8.0/SwitchCase.pdb
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.GeneratedMSBuildEditorConfig.editorconfig
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.AssemblyInfoInputs.cache
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.AssemblyInfo.cs
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.csproj.CoreCompileInputs.cache
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.sourcelink.json
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.dll
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/refint/SwitchCase.dll
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.pdb
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/SwitchCase.genruntimeconfig.cache
+/Users/stevenlegere/Documents/Development/Repositories/PracticeCode/stevesPlayground/SwitchCase/SwitchCase/obj/Debug/net8.0/ref/SwitchCase.dll
