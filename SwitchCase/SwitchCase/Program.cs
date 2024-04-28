@@ -144,4 +144,4 @@ switch (sku1)
         break;
 }
 
-Console.WriteLine($"{employeeName}, {title}");
+Console.WriteLine($"Product: {size1} {color1} {type1}");
