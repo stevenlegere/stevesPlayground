@@ -119,3 +119,29 @@ if (product[2] == "5")
 }
 
 Console.WriteLine($"Product: {size} {color} {type}");
+
+
+string sku1 = "01-MN-L";
+
+string[] product1 = sku1.Split('-');
+
+string type1 = "";
+string color1 = "";
+string size1 = "";
+
+switch (sku1)
+{
+    case "01":
+        type1 = "Sweath shirt";
+        break;
+
+    case "02":
+        type1 = "T-Shirt";
+        break;
+
+    case "03":
+        type1 = "Sweath pants";
+        break;
+}
+
+Console.WriteLine($"{employeeName}, {title}");
