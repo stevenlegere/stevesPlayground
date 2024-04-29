@@ -129,10 +129,10 @@ string type1 = "";
 string color1 = "";
 string size1 = "";
 
-switch (sku1)
+switch (product1[0])
 {
     case "01":
-        type1 = "Sweath shirt";
+        type1 = "Sweat shirt";
         break;
 
     case "02":
@@ -141,6 +141,21 @@ switch (sku1)
 
     case "03":
         type1 = "Sweath pants";
+        break;
+}
+
+switch (product1[1])
+{
+    case "BL":
+        color1 = "Black";
+        break;
+    
+    case "MN":
+        color1 = "Maroon";
+        break;
+
+    default:
+        color1 = "white";
         break;
 }
 
