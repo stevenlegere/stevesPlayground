@@ -142,6 +142,10 @@ switch (product1[0])
     case "03":
         type1 = "Sweath pants";
         break;
+    
+    default:
+        type1 = "Other";
+        break;
 }
 
 switch (product1[1])
