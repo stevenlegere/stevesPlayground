@@ -159,4 +159,23 @@ switch (product1[1])
         break;
 }
 
-Console.WriteLine($"Product: {size1} {color1} {type1}");
+switch (product1[2])
+{
+    case "S":
+        size1 = "Small";
+        break;
+
+    case "M":
+        size1 = "Medium";
+        break;
+
+    case "L":
+        size1 = "Large";
+        break;
+
+    default:
+        size1 = "One Size Fits All";
+        break;
+}
+
+Console.WriteLine($"Product1: {size1} {color1} {type1}");
